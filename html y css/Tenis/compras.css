@@ -1,0 +1,207 @@
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.compra1{ /*Estilo del contendor de la imagen de los tenis*/
+    float: left; /*El contenedor se posiciona a la izquierza*/
+    width: 50%; /*Ocupa un 50% del ancho del cancho de la pantalla*/
+height:50vh; /*Ocupa un 50 de la atura de la pantalla*/
+margin-bottom: 10px;
+margin-right: 12px; /*El margen de la derecha es de 12 px*/
+top: 0;
+
+}
+.compra1 img{ /*Imagen de los tenis*/
+    border-style: solid;
+border-radius: 20px;/*Un borde redondeado*/
+    width:100%; /*La imagen ocupara un 100% del ancho de su contenedor*/
+    height: 100%; /*La imagen ocupara un 100% de la altura de su contenedor*/
+}
+.tenis{ /*Estilo para el nombre de los tenis*/
+    font-size: 22px; /*El tamaño del texto es de 22px*/
+    font-family: cursive; /*el tipo de fuente es curisva*/
+    font-style: italic; /*El estilo de la fuente es italica*/
+    text-decoration: underline; /*Tiene un subrayarado*/
+}
+.marc{ /*Estilo para el texto de la marca de tenis*/
+  margin-top: -12px; /*sube ligeramente la posicion, separa de los elemntos de abajo*/
+    color:rgb(15, 139, 35); /*El color del texto es verde*/
+    
+}
+.Color{ /*Estilo para el texto del color de los tenis*/
+    font-weight: bolder; /*El texto esta en un tono fuerte de negrita*/
+    margin-top: -12px; /*sube ligeramente la posicion, separa de los elemntos de abajo*/
+}
+
+.Otros-colores{ /*Contenedor de las imagenes de otros colores de los tenis*/
+    float: left; /*Se situaran a la izquierda, al lado de la imagen principal de los tenis*/
+    width:40%; /*Ocuparan un 40% del ancho de la pantalla*/
+    margin-top: -10px;  /*sube ligeramente la posicion, separa de los elemntos de abajo*/
+    display:flex; /*Hace flexible el contendor para que quepan todas las elemntos*/
+    
+}
+.Otros-colores img{  /*imagenes de otros colores de los tenis*/
+    width: 25%; /*Cada imagen ocupa un 25% del ancho de su contenedor*/
+    transition: transform 0.2s ease-in-out; /*Cada imagen hara la animacion suavemente en un tiempo de 0.2 segundos*/
+    cursor: pointer;
+}
+
+
+.Otros-colores img:hover{
+    transform: scale(1.1); /*Al momemnto de pasar el raton sobre una imagen se hara una animacion que aumentara 1.1 el tamaño de la imagen*/
+    border: 3px solid black; /*Al momemnto de pasar el raton sobre una imagen esta obtendra un borde negro de 3px*/
+}
+.Comprar-ahora{ /*Estilo para el contenedor del boton de "Comprar ahora"*/
+width: 30%; /*El contenedor tendra un ancho del 30%*/
+margin-top: 10px; /*Margen de arriba de 10 pixeles*/
+border-radius: 20px; /*Borde redondeado de 20 pixeles*/
+display: flex; /*Hace flexible el contenedor*/
+font-size: 25px; /*Tamaño de la fuente*/
+height: 28px; /*Altura de 28 pixeles*/
+text-align: center; /*Alinea el texto al centro*/
+
+}
+.Comprar-ahora button{/*Estilo del boton*/
+  background-color: grey;/*El color de fondo sera gris*/
+border: none;/*Quita el borde del boton*/
+width: 100%;/*Ocupa el 100% de su contenedor*/
+border-radius: 20px; /*Borde redondeado*/
+  color: beige; /*Color de fuente beige*/
+}
+.Comprar-ahora button:hover { /*Al momemnto de pasar el mouse sobre el boton*/
+text-decoration: underline; /*Se subraya el texto*/
+text-decoration-color: black; /*La linea subrayada es negra*/
+cursor: pointer; /*Aparece el icono para dar click*/
+}
+.modal{ /*Estilo para la ventana modal*/
+    display: none; /* Ocultar la ventana modal por defecto */
+  position: fixed; /* Posicionar la ventana modal en la pantalla */
+  z-index: 1; /* Establecer el orden de capas */
+  padding-top: 100px; /* Agregar un espacio en la parte superior */
+  left: 0;
+  top: 0;
+  width: 100%; /* Establecer el ancho de la ventana modal */
+  height: 100%; /* Establecer el alto de la ventana modal */
+  overflow: auto; /* Agregar una barra de desplazamiento si es necesario */
+  background-color: rgb(0,0,0); /* Establecer el color de fondo de la ventana modal */
+  background-color: rgba(0,0,0,0.4); /* Establecer el color de fondo de la ventana modal con opacidad */
+  
+}
+/* Estilos para el contenido de la ventana modal */
+.Contenido-modal {
+    background-color: #fefefe; /*Color de fondo blanco*/
+    margin: 15% auto; /*Margen para centar todo al texto*/
+   justify-items: center; /*Alinea los elementos al centro*/
+    padding: 20px; /*Margen interior de 20px*/
+    border: 1px solid #888; /*Borde de 1 px de un tono gris*/
+    color: black; /*Color del texto negro*/
+    width: 80%; /* Establecer el ancho del contenido de la ventana modal */
+  }
+  
+  /* Estilos para el botón de Si */
+  .cerrar-Si {
+    color: #aaa;/*Color de texto de tono gris*/
+    font-size: 28px; /*Tamaño de texto de 28px*/
+    font-weight: bold; /*Texto en negrita*/
+    background-color: green; /*Color de fondo del boton es verde*/
+
+  }
+  .cerrar-No { /* Estilos para el botón de No */
+    color: #aaa; /*Color de texto de tono gris*/
+    font-size: 28px; /*Tamaño de texto de 28px*/
+    font-weight: bold; /*Texto en negrita*/
+    background-color: red; /*Color de fondo del boton es verde*/
+  }
+ 
+
+  .cerrar-Si:hover { /*Estilos al momento de mantener el cursor en el boton Si*/
+    color: black; /*Color de texto negroo*/
+    text-decoration: none; /*Sin decoracion al texto*/
+    cursor: pointer;  /*Aparece el icono para dar click*/
+  
+  }
+  .cerrar-No:hover { /*Estilos al momento de mantener el cursor en el boton Si*/
+    color: black; /*Color de texto negroo*/
+    text-decoration: none; /*Sin decoracion al texto*/
+    cursor: pointer; /*Aparece el icono para dar click*/
+   
+  }
+
+.Info-tenis{ /*Estilo para el contenedor de toda la info de los tenis*/
+    display: flex; /*Hace flexible el contenedor*/
+    flex-direction: column;  /*Direccion en columna*/
+    }
+.Info-tenis button{ /*Estilo parra todos los botones del contenedor*/
+    border: none; /*Elimina el borde de todos los contenedores*/
+    
+}
+.description{   /*Estilo para el contenedor de la descripcion*/
+    text-align: justify; /*Permite que el texto quede en un equivalente de mismas lineas*/
+    word-spacing: 3px; /*Espacio entre palabras*/
+    margin-top: 12px; /*baja ligeramente la posicion, separa de los elemntos de arriba*/
+    
+}
+.button-desc{ /*Estilo del Boton para mostrar o no la descripcion*/
+width: 40%; /*Ocupara un 18% del ancho de la pantalla*/
+ display: inline-block;/*Permite que los elementos esten en una sola linea y no forzara el salto de linea*/
+ 
+}
+
+.button-desc img{ /*Estilo para la imagen de la flechita que sale en la descripcion*/
+    position: absolute; /*Posicion absoluta para la imagen*/
+    right: 0; /*Posicionada a la izquierda*/
+    width: 15px;/*El anchon es de 15px*/
+}
+.Ocultar-descripcion{ /*estilo para desaparecer la descripcion*/
+    display: none; /*Hace desaparecer la descripcion*/
+}
+.Mostrar-descripcion{ /*estilo para aparecer la descripcion*/
+    display: block; /*Hace aparecer la descripcion*/
+}
+.detalles{ /*Estilo para el contenedor de la lista de detalles*/
+width: 30%; /*Tendra un ancho del 30%*/
+}
+.detalles-lista{ /*Estilo para los elementos de la lista*/
+    column-count: 2; /*Habra 2 columnas*/
+    column-gap: 140px; /*El espacio entre las columnas es de 140px*/
+    width:70%; /*Tendra un ancho del 70%*/
+}
+.detalles img{ /*Estilo para la flechita que sale al lado del boton*/
+    position: absolute; /*Posicion absoluta para la imagen*/
+    right: 0; /*Posicionada a la izquierda*/
+    width: 15px/*El anchon es de 15px*/
+}
+.mostrar{ /*Estilo para desplegar y aparecer los elemntos de la lista*/
+    display:list-item; /*Hace aparecer los elementos de la lista*/
+}
+.ocultar{ /*Estilo desaparecer los elemntos de la lista*/
+display: none;  /*Hace desaparecer los elementos de la lista*/
+}
+.Texto-Modelos{/*Estilo para el contenedor del parrafo que muestra otros modelos de los tenis*/
+    width: 100%; /*El ancho es del 100% de la pantalla*/
+   display: inline-block; /*Permite que los elementos esten en una sola linea y no forzara el salto de linea*/
+    justify-items: center; /*Alinea los elemnetos hijos al centro de forma horizontal*/
+    background-color: #cda055; /*El color de fondo sera de un tono dorado*/
+    box-shadow: 0 10px 20px black; /*Obtiene un sombreado negro*/
+    border-radius: 10px; /*El borde curbo sera de 10px*/
+}
+.Otros-Modelos{ /*Estilo para el contenedor de las imagenes de otros modelos parecidos a los tenis*/
+    display: flex; /*Hace flexible el contenedor*/
+    width: 100%; /*Ocupa el 100% del ancho de la pantalla*/
+ gap: 5px; /*Espacio entre los elementos del contenedor*/
+ overflow-x: scroll; /*Linea de desplazamiento horizontal*/
+ scroll-snap-type: x mandatory; /*Ajusta el contenedor a la imagen mas cercana segun se vaya desplazando*/
+}
+.Otros-Modelos>div{ /*Estilo para los contenedores de las imagenes*/
+scroll-snap-align: center; /*Alinea la linea de desplaxzamiento al centro*/
+    margin: 10px; /*Margen de 10px*/
+    background-color: aliceblue; /*Color de fondo*/
+    min-width: 400px; /*Ancho minimo de 300px*/
+    text-align: center; /*Alinea el texto al centro*/
+}
+.Otros-Modelos img{ /*Las imagenes dentro del contenedor de otros modelos*/
+    width: 100%; /*Cada imagen mide un 20% del ancho de su contenedor*/
+    height: 225px; /*Cada imagen mide de altura 225px*/
+    
+}

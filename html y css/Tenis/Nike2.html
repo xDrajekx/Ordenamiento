@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        <link rel="stylesheet" href="compras.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name = 'keywords' content = 'ropa tienda tenis'> 
+        <title>CATALOGO</title>
+    </head>
+    <body>
+     
+        <div class="compra1">
+            <img id="cambiar" src="../Imagenes/AirMax90.jpg" alt=""> <!--Imagen de los tenis que seleccionaste-->
+        </div>
+      
+            <h3 class="tenis"> AirMax90 </h3> <!--Nombre de los tenis-->
+            <p  class="marc"> Marca: Nike</p><!--Marca de los tenis-->
+            <p  id="Cambiar-color"  class="Color"> Color: Negro</p> <!--Color de los tenis--> <!--id: Cambiar-color-->
+            <h3>Otros colores </h3>
+            <div class="Otros-colores"> 
+            <img id="click4" src="../Imagenes/AirMax90.jpg" alt="Una imagen de otros Air Max90"> <!--Imagen de otro color de los tenis-->
+            <img id="click1" src="../Imagenes/AirMax902.jpg" alt="Una imagen de otros Air Max90 "> <!--Imagen de otro color de los tenis-->
+            <img id="click2" src="../Imagenes/AirMax903.jpg" alt="Una imagen de otros Air Max90"> <!--Imagen de otro color de los tenis-->
+            <img id="click3" src="../Imagenes/AirMax904.jpg" alt="Una imagen de otros Air Max90"> <!--Imagen de otro color de los tenis-->
+         
+            <img id="click5" src="../Imagenes/AirMax906.jpg" alt="Una imagen de otros Air Max90"> <!--Imagen de otro color de los tenis-->
+          <!--Esta seccion contuvo varios id para el JavaScript-->
+            </div>
+            
+           <div class="Comprar-ahora"> <button id="Abrir-modal"> Comprar ahora</button></div> <!--Contenedor para el boton de Comprar Ahora junto con id para el javscript-->
+           <div id="modal" class="modal"> <!--Cotenedor para la ventana modal junto con id para el javscript-->
+            <div class="Contenido-modal"> <!--Contenedor y contenido de la ventana modal junto con id para el javscript-->
+                
+                <h2> ¿Estas seguro de realizar esta compra?</h2> <!--Contenido que aparece en la ventana modal-->
+               
+                <button class="cerrar-Si">Si</button> <!--Boton para aceptar comprar-->
+                <button class="cerrar-No">No</button> <!--Boton para no aceptar comprar-->
+                </div>
+            
+            </div>
+
+
+           </div>
+           <div class="Info-tenis"> <!--Contenedor que abarca toda la informacion de los tenis como detalles y descripcion-->
+          <div class="button-desc"> <button id ="Mostrar">Descripcion  </button><img src="../Imagenes/Flecha.jpg"></div> <!--Boton para la descripcion de los tenis junto con el id para mostrarla o no-->
+          <div class="description">  <p class="Ocultar-descripcion"> Con su diseño elegante y minimalista, los Air Max 90 combinan estilo y comodidad en un solo paquete. La unidad Air Max visible en la parte inferior del talón proporciona una amortiguación incomparable, mientras que la parte superior de malla y cuero sintético garantiza una transpirabilidad y durabilidad excepcionales.
+           <!--Descripcion de los tenis--> </p>
+        </div>
+        <div class="detalles"> <button id="mostrando"> detalles</button><img src="../Imagenes/Flecha.jpg">  </div> <!--Contenedor para la lista de detalles de los tenis junto con el id para mostrarla o no-->
+            
+            <ul id="Lista" class="ocultar detalles-lista"> <!--La lista estara oculta por defecto al igual que la descripcion-->
+                <li> Agrega una amortiguación increíble.
+                </li>
+                <li>Estilo versátil</li>
+                <li>Estilo retro</li>
+            </ul>
+            
+       
+    </div>
+        <div class="Texto-Modelos"> <!--Contenedor para el texto de modelos similares-->
+            <h2>Modelos Similares</h2>
+        
+<div class = "Otros-Modelos"> <!--Contenedor para el carrussel de modelos similares-->
+
+   <div> <img  src="../Imagenes/Air Max Bw.jpg" alt="Una imagen de otros Air Max90 "> <!--Imagen de otro color de los tenis-->  <h2>Air max Bw</h2></div>
+   <div> <img  src="../Imagenes/AirMax95.jpg" alt="Una imagen de otros Air Max90"> <!--Imagen de otro color de los tenis--> <h2>AirMax95</h2></div>
+   <div> <img  src="../Imagenes/AirMax97.jpg" alt="Una imagen de otros Air Max90"> <!--Imagen de otro color de los tenis--> <h2>AirMax97</h2></div>
+   <div><img  src="../Imagenes/AirMaxPLusTN.jpg" alt="Una imagen de otros Air Max90"> <!--Imagen de otro color de los tenis--> <h2>AirMaxPlusTN</h2></div>
+   <div><img  src="../Imagenes/AirMaxZero.jpg" alt="Una imagen de otros Air Max90"> <!--Imagen de otro color de los tenis--> <h2>AirMaxZero</h2></div>
+<!--Multiples contenedores para cada imagen y su respectivo nombre de los tenis-->
+</div>
+    <script src="../Java/ClickImagenes.js"></script> <!--Archivo de JavaScript-->
+
+</body>
