@@ -1,0 +1,55 @@
+body{
+    background-image: url(Imagenes/Negocio2.jpg);/*La imagen ocupa el fondo de la pagina */
+    background-repeat: no-repeat; /*La imagen no se repite */
+    background-size: cover; /*La imagen ocupa todo el espacio */
+}
+.destacados{
+    background-color: black; /* Da un fondo negro a los textos de destacados*/
+    opacity: 0.8; /*Hace ligeramento transparentes los textos de destacados*/
+    align-items: center; 
+    text-align: center; /*Alinea el texto de los destacados al centro*/
+}
+
+.destacados h2{
+      color: #cda055; /*Da un color dorado a los textos de los destacados*/
+          font-style: italic; /*Estilo de fuente estatica*/
+    font-family:cursive; /*Tipo de fuente cursiva*/
+    text-shadow: 0 0 10px red; /*Sombreado de los textos de destacados con un color rojo*/
+    border:10px red; /*Borde del texto de los destacados es de 10px*/
+    border-style:solid; /*Estilo de borde es solido*/
+    border-radius: 20px; /*Da un estilo curvo al borde */
+    
+}
+.nike{/*Estilo para el contenedor de las imagenes de los tenis con los links*/
+    display: flex; /*Hace flexible el contenedor permitiendo contener todos los links*/    
+}
+.nike img{/*Estilo para las imagenes de los tenis*/
+    width: 100%; /*Cada imagen ocupara el 100% de su contenedor que son los links*/
+    border: 5px solid #cda055;/*Cada imagen tendra un borde de 5 px con un color dorado*/
+    transition: transform 0.2s ease-in-out; /*Cada imagen hara la animacion suavemente en un tiempo de 0.2 segundos*/
+}
+
+
+.nike a {/*Estilo para los links de las imagenes de los tenis*/
+
+    max-width: 30%; /*El tamaño maximo de los links-imagenes respecto a su contenedor div es del 30%*/
+margin: 15px; /*El margen de los links-imagenes es de 15px*/
+}
+
+.nike img:hover{/*Estilo para la animacion de las imagenes de los tenis*/
+    transform: scale(1.1); /*Al momemnto de pasar el raton sobre una imagen se hara una animacion que aumentara 1.1 el tamaño de la imagen*/
+    
+}
+ .parrafo{ /*Contenedor para los nombres de los tenis*/
+    display: flex; /*Hace flexible el contenedor*/
+    text-align: center; /*Alinea los nombres al centro*/
+ }
+.parrafo p{
+    width: 30%; /*El tamaño del texto respecto a su contenedor es del 30%*/
+    margin: 15px;/*El margen entre los textos es 15px*/
+    margin-top: -15px;/*Acomoda los nombres un poco mas arriba*/
+    font-size: 22px; /*El tamaño del texto de los nombres es de 22px*/
+    font-family: fantasy; /*El tipo de fuente es fantasy*/
+    color: beige; /*El texto tendra un color verde*/
+    text-shadow: 5px  5px 10px red; /*El texto tendra un sombreado rojo*/
+}

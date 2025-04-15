@@ -1,0 +1,24 @@
+.tenis{
+    display:flex;/*crea un contenedor flexible y adaptable*/
+    flex-direction: row; /*define la direccion en la que se disponen los elementos en este caso de izquierda a derecha */
+    flex-wrap:nowrap;/*evita que los elemntos se envuelvan*/
+    align-items: center;/*alinea alos elementos en el centro*/
+}
+
+.tenis img{
+    width: 90%; /*el ancho del elemnto*/
+    margin: 15px;/*da un espacio entre elemnto*/
+    border: 5px solid #cda055;/*da ancho ,estilo y color al borde*/
+    transition: transform 0.2s ease-in-out;
+    border-radius: 20px;/*redondea al borde*/
+}
+
+.tenis a{
+    max-width: 100%;
+    margin: 15px;/*da un espacio entre elemento*/
+}
+
+.tenis img:hover{
+    transform: scale(1.1);
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,74 @@
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las imágenes en la fila */
+    gap: 20px; /* Espacio entre cada imagen */
+}
+
+.imagen-container {
+    background-color: #d3cece; /* Color gris alrededor de la imagen */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: fit-content;
+    width: 250px;
+}
+/* Diseño responsivo */
+@media screen and (max-width: 768px) {
+    .contenedor {
+        flex-direction: column; /* Cambia a una sola columna */
+        align-items: center;
+    }
+
+    .imagen-container {
+        width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+    }
+}
+
+
+.imagen-container img {
+    width: 200px;
+    height: auto;
+    border: 5px solid rgb(129, 121, 129);
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out; /* Transición suave */
+}
+
+.contenedor img:hover {
+    transform: scale(1.1); /* Hace que la imagen aumente ligeramente */
+    border-color: red; /* Cambia el color del borde */
+    border-radius: 20px; /* Cambia el borde redondeado */
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #11c011;
+    margin-top: 10px;
+}
+
+
+.B1 {
+    border: none;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.B1:hover {
+    transform: scale(1.1);
+    background-color: rgb(219, 4, 4); /* Mantiene el fondo negro */
+    border-radius: 20px;
+    outline: none; /* Evita bordes blancos no deseados */
+}
+
+.B2 {
+    background-color: black; /* Fondo negro */
+    color: rgb(236, 235, 235);
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    border: none; /* Evita cualquier borde blanco */
+}
+

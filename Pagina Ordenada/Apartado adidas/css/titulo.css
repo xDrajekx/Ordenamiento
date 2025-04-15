@@ -1,0 +1,45 @@
+body{
+    background: #000000;  
+background: -webkit-linear-gradient(to right, #434343, #000000);  
+background: linear-gradient(to right, #434343, #000000); 
+
+}
+
+.titulo{
+   background-color: black; /*es el color de fondo*/
+   border-radius:20px ; /*redondea las esquinas */
+   opacity: 0.8; /* manipula la opacidad de un elemento*/
+   align-items: center; /*centra los objetos*/
+   border: 10px; box-shadow: #cda055;
+   
+}
+
+.titulo h1{
+    color: #cda055; /*color denla letra */
+    font-style: italic; /*estilo del texto*/
+    font-family: cursive; /*estilo del texto*/
+    text-shadow: 0 0 10px red;/*es la creacion de la sombra*/
+    border:10px red; box-shadow: #cda055;/*ancho del border ,color,*/
+    border-style: solid; /*estilo del borde*/
+    border-radius: 20px; /*rendondeado del borde*/
+    text-align: center; /*alinea al texto en el centro*/
+}
+
+video{
+    width:100%; /*ancho del video*/
+    height: 700px; /*altura del video*/
+    margin: 0 auto;
+    border: 20px;
+    border-color: black; /*color del borde */
+    border-radius: 1000px;/*redondeo del borde */
+    
+}
+
+.catalogo{
+    margin: 10%;
+}
+
+
+
+
+

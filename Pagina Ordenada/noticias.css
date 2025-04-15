@@ -1,0 +1,8 @@
+body{
+    background: linear-gradient(to left, #190a4eb0,#1e0d4c);/*Esto es para combinar varios colores a la ves*/
+}
+p{
+    text-align: center;
+    font-size: 30px;
+    color: bisque;
+}

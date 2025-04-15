@@ -1,0 +1,73 @@
+h1/*encabezado*/{
+    font-size: 20px;/*para el tamaño de letra*/
+    text-align: center;/*para centrar el texto*/
+    font-style: italic;/*permite canviar la tipografia*/
+    background: #3b8058a8;/*color de fondo*/
+    color: black;/*color de la letra*/
+    border-style: solid;/*estilo de bordeado solido */
+    box-sizing: border-box;/*estira el padding y despues el border formando un tamaño total*/
+    box-shadow: 0 4px 8px #158bcf; /* Agregué un desplazamiento de sombra */
+    padding: 12px 12px ;/*aumenta 12px arriba y disminuye 12px abajo la distancia en el contenido de los bordes*/
+    text-transform: capitalize;/*coloca la primera letra de cada palabra en mayuscula*/
+    border-radius: 20px;/*son los pixeles del redondeo del borde*/
+}
+body{
+    background: linear-gradient(to left, #190a4eb0,#1e0d4c);/*Esto es para combinar varios colores a la ves*/
+}
+.problema /*esta clase esta voculada con un input de texto*/{
+    width: 50%;/*anchura 50%*/
+    position: relative;/*Es útil para crear diseños más flexibles y esta 20 pixeles hacia arriba*/
+    top: 20px;/*20px hacia arriba*/
+    box-shadow: 0 10px 20px #0fa8ada2;/*el sombreado hacia abajo y hacia la izquierda*/
+    left: 55%;/*55% hacia la izquierda*/
+    transform: translateX(-95%);/*desplaza el elemento un -95% , en relación con su propio tamaño (anchura y altura).*/
+}
+.Ch/*Es un input que requiere tu nombre y apellidos */{
+    width: 50%;/*anchura del input del 50%*/
+    position: relative;/*Es útil para crear diseños más flexibles y esta 20 pixeles hacia arriba*/
+    top: 23px;/*23px hacia arriba*/
+    box-shadow: 0 10px 20px #00fa60a2;/*el sombreado hacia abajo y hacia la izquierda*/
+    left: 55%;/*55% hacia la izquierda*/
+    transform: translateX(-95%);/*desplaza el elemento un -95% , en relación con su propio tamaño (anchura y altura).*/
+}
+
+.vh/*es un input que pide tu correo*/{
+    width: 50%;/*anchura del input del 50%*/
+    position: relative;/*Es útil para crear diseños más flexibles y esta 20 pixeles hacia arriba*/
+    top: 25px;/*25px hacia arriba*/
+    box-shadow: 0 10px 20px #00fa60a2;/*el sombreado hacia abajo y hacia la izquierda*/
+    left: 55%;/*55% hacia la izquierda*/
+    transform: translateX(-95%);/*desplaza el elemento un -95% , en relación con su propio tamaño (anchura y altura).*/
+}
+.vi/*es un input que pide contraseñas*/{
+    width: 50%;/*anchura del input del 50%*/
+    position: relative;/*Es útil para crear diseños más flexibles y esta 20 pixeles hacia arriba*/
+    top: 28px;/*28px hacia arriba*/
+    box-shadow: 0 10px 20px #00fa60a2;/*el sombreado hacia abajo y hacia la izquierda*/
+    left: 55%;/*55% hacia la izquierda*/
+    transform: translateX(-95%);/*desplaza el elemento un -95% , en relación con su propio tamaño (anchura y altura).*/
+}
+.S/*Es el boton de enviar*/{
+    position: relative;/*Es útil para crear diseños más flexibles y esta 20 pixeles hacia arriba*/
+    width: 15%;/*anchura del input del 15%*/
+    top: 30px;/*30px hacia arriba*/
+    box-shadow: 0 10px 20px #00fa60a2;/*el sombreado hacia abajo y hacia la izquierda*/
+    left: 78%;/*78% hacia la izquierda*/
+    transform: translateX(-500%);/*desplaza el elemento un -500% , en relación con su propio tamaño (anchura y altura).*/
+}
+div/*una caja de division con los inputs*/{
+    background-color: #947070; /* Cambia el color a tu preferencia */
+    text-align: center; /* Centra el contenido del div */
+    width: 550px;/*Es la anchura del divisor de los inputs*/
+    padding-left: 20px;/* Añade un poco de espacio alrededor del contenido del lado izquierdo */
+    padding-right:20px ;/* Añade un poco de espacio alrededor del contenido del lado izquierdo */
+    height: 270px;/*altura de 270pixeles*/
+    background: linear-gradient(to left, #190a4eb0,#3b12ac);
+   justify-self: center;/*centrar el contenido*/
+}
+
+input /*es la calse para editar directamente los inputs*/{
+    display: block; /* Hace que cada input ocupe toda la línea */
+    margin: 10px auto; /* Auto margin centrará el input horizontalmente */
+    padding: 10px; /* Añade un poco de relleno */
+}

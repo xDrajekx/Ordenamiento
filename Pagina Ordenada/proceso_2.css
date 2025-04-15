@@ -1,0 +1,91 @@
+.menu {
+    background-color: #333;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > ul {
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    pointer-events: all;
+}
+
+
+.menu a:hover,
+.menu a:focus {
+    background-color: #b02525;
+}
+
+.menu a.active {
+    background-color: #15c73e;
+}
+
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #373334;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    z-index: 10; /* Asegura que el submenu esté por encima de otros elementos */
+}
+
+
+.submenu ul {
+    display: block;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu a {
+    padding: 12px 16px;
+}
+
+.menu li:hover > .submenu,
+.menu li:focus-within > .submenu {
+    display: block;
+}
+
+.logo img{
+    width: 70px;
+    height:70px ;
+    margin-left:absolute  ;
+    border-radius: 20px;
+    margin-right:10px ;
+}
+
+.contenedor {
+    display: flex; /* Activa flexbox */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    padding: 25px; /* Agrega espacio entre imágenes */
+}
+.contenedor img {
+    width: 200px; /* Define el ancho de cada imagen */
+    height: auto; /* Mantiene la proporción */
+}
+.contenedor img {
+        border: 3px solid black;
+        padding: 10px;
+        
+    }
+    body{
+        background-color: rgb(255, 255, 255);
+    }
