@@ -13,7 +13,9 @@
     
      
         <body><!--Aqui se muestra todo lo que coloquemos a la pagina web-->
+            
             <nav class="menu"><!--el menu inicia aqui-->
+            
                 
                 <ul><!--es el simbolo de listas ordenadas-->
                     <div class="logo"> <img src="D:\Apartado adidas\images\logo.jpg"></div> <!--logo en el menu-->
@@ -44,7 +46,7 @@
                     </li><!--mini elemnto de las listas ordenadas-->
                     <li><a href="noticias.html">Noticias</a></li><!--Es el apartado de linkeo que me lleva al apartado de noticias de mi pagina-->
                     <li><a href="contactos.html">Contacto</a></li><!--Es el apartado de linkeo que me lleva al apartado de contactos de mi pagina-->
-                    
+            
                 </ul><!--Esto son las listan desordenadas el oreden no importa-->
             </nav> <!--el menu termina aqui-->
         
@@ -52,31 +54,146 @@
             <h1>Adidas</h1>
         </div>
 
-        <video src="D:\Apartado adidas\video\logo adidas.mp4" autoplay loop muted></video> <!--ruta del video y le quita el sonido y lo repite-->
-         <div class="catalogo">
-<!--clases para poner la fila de imagenes de 3 en 3 de manera ordenada aqui inician-->
-        <div class="tenis"><a href="D:\Apartado adidas\tenis1.html"><img src="D:\Apartado adidas\images\tenis1.jpg"></a>
-        <a href="D:\Apartado adidas\tenis1.html"> <img src="D:\Apartado adidas\images\tenis2.jpg"></a>
-        <a href="D:\Apartado adidas\tenis1.html">  <img src="D:\Apartado adidas\images\tenis3.jpg"> </a>
-        </div>
-
-        <div class="tenis"><a href="D:\Apartado adidas\tenis1.html"><img src="D:\Apartado adidas\images\teni4.jpg"></a>
-            <a href="D:\Apartado adidas\tenis1.html"><img src="D:\Apartado adidas\images\teni5.jpg"></a>
-            <a herf="D:\Apartado adidas\tenis1.html"><img src="D:\Apartado adidas\images\teni6.jpg"></a>
-
-        </div>
-
-        <div class="tenis"><a href="D:\Apartado adidas\tenis1.html"> <img src="D:\Apartado adidas\images\twni7.jpg"></a>
-            <a href="D:\Apartado adidas\tenis1.html"> <img src="D:\Apartado adidas\images\teni8.jpg"></a>
-            <a herf="D:\Apartado adidas\tenis1.html"> <img src="D:\Apartado adidas\images\teni9.jpg"></a>
-        </div>
-
-        <div class="tenis"><a href="D:\Apartado adidas\tenis1.html"><img src="D:\Apartado adidas\images\teni10.jpg"></a>
-            <a href="D:\Apartado adidas\tenis1.html"><img src="D:\Apartado adidas\images\tenis11.jpg"></a>
-            <a href="D:\Apartado adidas\tenis1.html"><img src="D:\Apartado adidas\images\teni12.jpg"></a>
-        </div>
+         <div class="video">
+            <video src="D:\Apartado adidas\video\logo adidas.mp4" autoplay loop muted></video> <!--ruta del video y le quita el sonido y lo repite-->
+            <p>Adidasbjbdvbdovbdsvisbvidbvibvibidbv]ibvidvidbvoidbvodbvdbv</p>
          </div>
-        <!--aqui terminan las clases de las imagenes -->
+
+
+                <div class="contenedor">
+                    <div class="imagen-container">
+                        <img src="D:\Apartado adidas\images\teni1.jpg" alt="Producto 1">
+                        <h3>Adidas Campus 00s</h3>
+                        <p class="precio">$299.99</p>
+                        <button class="B1"><box class="B2">Comprar</box></button>
+                        <button id="mostrarbtn" class="b3"><box class="b4">ver de cerca</box></button> 
+                    </div>
+
+                    <!--aqui inicia la funcion de mostrar imagenes recortadas -->
+
+                   <div id="modal" class="modal"> <!--aqui se se le da un parametro y una clse al espacio que utilizaremos -->
+                    <span class="close"                 
+                    id="cerrarbtn">&times;</span> <!--le damos un id al boton y le damos forma de cruz que representa cierre dentro del span para que tenga diseño em el modal-->
+                    <img class="modal-content"
+                    id="imagenmodal">  <!--se crea la clase modal-contend donde trendremos el contenido que seran las imagenes y un id para javascrip-->
+                    <div class="flechas">  <!-- se da la clase de clechas y se crean y se las da id para darle funciones -->
+                        <span id="anterior">&#10094;</span>
+                        <span
+                        id="siguiente">&#10095;</span>
+                    </div>
+                   </div>
+                        
+                        
+                
+                    
+
+
+                    <div class="imagen-container">
+                        <img src="D:\Apartado adidas\images\teni2.jpg" alt="Producto 2">
+                        <h3>Adidas superstar</h3>
+                        <p class="precio">$399.99</p>
+                        <button class="B1"><box class="B2">Comprar</box></button>
+                        <button id="mostrarbtn2" class="b3"><box class="b4">ver de cerca</box></button>
+                       
+                         
+                    </div>
+
+
+
+
+                    <div class="imagen-container">
+                        <img src="/Apartado adidas/images/teni3.jpg" alt="Producto 3">
+                        <h3>Forum Low CL</h3>
+                        <p class="precio">$499.99</p>
+                        <button class="B1"><box class="B2">Comprar</box></button>
+                        <button id="mostrarbtn3" class="b3"><box class="b4">ver de cerca</box></button> 
+                    </div>
+
+
+
+
+                    <div class="imagen-container">
+                        <img src="/Apartado adidas/images/teni4.jpg" alt="Producto 4">
+                        <h3>Adizero Adios Pro4</h3>
+                        <p class="precio">$599.99</p>
+                        <button class="B1"><box class="B2">Comprar</box></button>
+                        <button id="mostrarbtn4" class="b3"><box class="b4">ver de cerca</box></button> 
+                    </div>
+            
+                    <div class="imagen-container">
+                        <img src="/Apartado adidas/images/teni5.jpg" alt="Producto 5">
+                        <h3>adidas Gazelle</h3>
+                        <p class="precio">$699.99</p>
+                        <button class="B1"><box class="B2">Comprar</box></button>
+                        <button id="mostrarbtn5" class="b3"><box class="b4">ver de cerca</box></button> 
+                    </div>
+
+
+                    <div class="imagen-container">
+                        <img src="/Apartado adidas/images/teni6.jpg" alt="Producto 6">
+                        <h3>adidas Samba X toy story</h3>
+                        <p class="precio">$799.99</p>
+                        <button class="B1"><box class="B2">Comprar</box></button>
+                        <button id="mostrarbtn6" class="b3"><box class="b4">ver de cerca</box></button> 
+                    </div>
+
+
+                    <div class="imagen-container">
+                        <img src="/Apartado adidas/images/teni7.jpg" alt="Producto 7">
+                        <h3>Adidas originals X Bad Bunny </h3>
+                        <p class="precio">$899.99</p>
+                        <button class="B1"><box class="B2">Comprar</box></button>
+                        <button id="mostrarbtn7" class="b3"><box class="b4">ver de cerca</box></button> 
+                    </div>
+
+
+                    <div class="imagen-container">
+                        <img src="/Apartado adidas/images/teni8.jpg" alt="Producto 8">
+                        <h3>Nike Adidas italia X CP company</h3>
+                        <p class="precio">$999.99</p>
+                        <button class="B1"><box class="B2">Comprar</box></button>
+                        <button id="mostrarbtn8" class="b3"><box class="b4">ver de cerca</box></button> 
+                    </div>
+
+                    <div class="imagen-container">
+                        <img src="/Apartado adidas/images/teni9.jpg" alt="Producto 8">
+                        <h3>Adidas gazelle</h3>
+                        <p class="precio">$999.99</p>
+                        <button class="B1"><box class="B2">Comprar</box></button>
+                        <button id="mostrarbtn9" class="b3"><box class="b4">ver de cerca</box></button> 
+                    </div>
+
+                    <div class="imagen-container">
+                        <img src="/Apartado adidas/images/teni10.jpg" alt="Producto 8">
+                        <h3>Adidas Handball spezial</h3>
+                        <p class="precio">$999.99</p>
+                        <button class="B1"><box class="B2">Comprar</box></button>
+                        <button id="mostrarbtn10" class="b3"><box class="b4">ver de cerca</box></button> 
+                    </div>
+
+                    <div class="imagen-container">
+                        <img src="/Apartado adidas/images/teni11.jpg" alt="Producto 8">
+                        <h3>Adidas Samba innvictus</h3>
+                        <p class="precio">$999.99</p>
+                        <button class="B1"><box class="B2">Comprar</box></button>
+                        <button id="mostrarbtn11" class="b3"><box class="b4">ver de cerca</box></button> 
+                    </div>
+
+
+                    <div class="imagen-container">
+                        <img src="/Apartado adidas/images/teni12.jpg" alt="Producto 8">
+                        <h3>Adizero Adios Pro4</h3>
+                        <p class="precio">$999.99</p>
+                        <button class="B1"><box class="B2">Comprar</box></button>
+                        <button id="mostrarbtn8" class="b3"><box class="b4">ver de cerca</box></button> 
+                    </div>
+
+
+                 
+                </div>
+
+             <script src="\Apartado adidas\Javascrip\imagenes.js"></script>
+             
     </body>
 
 </html>
