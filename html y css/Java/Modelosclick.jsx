@@ -1,0 +1,1 @@
+//Todo este script sera para reenviar y mostrar la informaciuon correcta en dado caso de dar click en mismo modelo pero de diferente color

@@ -1,55 +1,255 @@
 body{
-    background-image: url(Imagenes/Negocio2.jpg);/*La imagen ocupa el fondo de la pagina */
-    background-repeat: no-repeat; /*La imagen no se repite */
-    background-size: cover; /*La imagen ocupa todo el espacio */
+    background: #000000;  
+    background: -webkit-linear-gradient(to right, #434343, #000000);  
+    background: linear-gradient(to right, #434343, #000000); 
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 425px;
+    height: 100%;
+    padding: 20px;
+    display: none;
+    z-index: 1;
+    background-color: white;
+}
+.Contenido{
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    
+}
+.button-ordena{ /*Estilo del Boton para mostrar o no la descripcion*/
+    width: 80%; /*Ocupara un 18% del ancho de la pantalla*/
+  font-size: 19px;
+     font-weight: bold;
+     
+    }
+    
+    .button-ordena img{ /*Estilo para la imagen de la flechita que sale en la descripcion*/
+        position: absolute; /*Posicion absoluta para la imagen*/
+        right: 0; /*Posicionada a la izquierda*/
+        width: 15px;/*El anchon es de 15px*/
+    }
+    .button-ordena button{
+        border: none;
+        background-color: white;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 21px;
+    }
+    .oculta-ordena{
+        display: none;
+    }
+    .muestra-ordena{
+        display: block;
+    }
+    .Oculta-Marcas{
+        display: none;
+      
+    }
+    .Muestra-Marcas{
+        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+    .Oculta-Modelos{
+        display: none;
+    }
+    .Muestra-Modelos{
+        display: block;
+    
+    }
+    .Oculta-color{
+        display: none;
+    }
+    .Muestra-color{
+        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+    .modelo{
+        cursor: pointer;
+
+    }
+    .Oculta-generos{
+        display: none;
+    }
+    .Muestra-generos{
+        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+    .Allcheck{
+        appearance: none;
+        height: 30px;
+        border: 1px solid black;
+      
+        width: 30px;
+        cursor: pointer;
+        vertical-align: middle;
+    }
+
+    .Allcheck:checked::after{
+        content: "\2714"; /* Marca de verificación */
+        font-size: 30px;
+        color: black;
+        display: block;
+        text-align: center;
+        line-height: 32px;
+    }
+    label{
+        display: inline-block;
+        vertical-align: middle;
+    }
+  
+   .checkboxes{
+    background-color: black;
+   }
+   .checkboxes:checked::after{
+    content: "\2713";
+    font-size: 30px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 32px;
+   }
+   .checkboxesII{
+    background-color: white;
+    border: 3px solid black;
+   }
+  
+   .checkboxesIII{
+    background-color: red;
+   }
+   .checkboxesIV{
+    background-color: blue;
+   }
+   .checkboxesV{
+    background-color: yellow;
+   }
+   .checkboxesVI{
+    background-color: #11c011;
+   }
+   .checkboxesVII{
+    background-color: violet;
+   }
+   .checkboxesVIII{
+    background-color:orange;
+   }
+
 .destacados{
-    background-color: black; /* Da un fondo negro a los textos de destacados*/
+    background-color:beige; /* Da un fondo negro a los textos de destacados*/
     opacity: 0.8; /*Hace ligeramento transparentes los textos de destacados*/
     align-items: center; 
     text-align: center; /*Alinea el texto de los destacados al centro*/
+    border:3px solid #666666; /*Borde del texto de los destacados es de 10px*/
+    border-radius: 20px; /*Da un estilo curvo al borde */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    justify-self: center;
+    width: 80%;
+    height: 70px;
+    margin: 20px;
 }
 
 .destacados h2{
-      color: #cda055; /*Da un color dorado a los textos de los destacados*/
-          font-style: italic; /*Estilo de fuente estatica*/
-    font-family:cursive; /*Tipo de fuente cursiva*/
-    text-shadow: 0 0 10px red; /*Sombreado de los textos de destacados con un color rojo*/
-    border:10px red; /*Borde del texto de los destacados es de 10px*/
-    border-style:solid; /*Estilo de borde es solido*/
-    border-radius: 20px; /*Da un estilo curvo al borde */
+  background-color: #fdf6e3;
+}
+.imagenes-ocultas{ /*Contenedor de las imagenes ocultas*/
+    width: 250px; 
+    display: flex;
+    justify-self: center; /*Justifica el contenedor junto con las img al centro*/
+    display: none; /*Oculta el contenedor, asi ocultando las imagenes*/
+  
+  
+}
+.imagenes-ocultas img { /*Las imagenes*/
+width:45px ; /*un tamaño de 45px*/
+height: 50px;
+}
+.imagenes-ocultas img:hover{ 
+    border-bottom:  3px solid black;
+}
+.imagenes-ocultas a{
+    text-decoration: none;
     
 }
-.nike{/*Estilo para el contenedor de las imagenes de los tenis con los links*/
-    display: flex; /*Hace flexible el contenedor permitiendo contener todos los links*/    
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las imágenes en la fila */
+    gap: 20px; /* Espacio entre cada imagen */
+
 }
-.nike img{/*Estilo para las imagenes de los tenis*/
-    width: 100%; /*Cada imagen ocupara el 100% de su contenedor que son los links*/
-    border: 5px solid #cda055;/*Cada imagen tendra un borde de 5 px con un color dorado*/
-    transition: transform 0.2s ease-in-out; /*Cada imagen hara la animacion suavemente en un tiempo de 0.2 segundos*/
+
+.imagen-container {
+    background-color: #f2f2f2; /* Color gris alrededor de la imagen */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: fit-content;
+    width: 250px;
+    border: 3px solid #666666;
+}
+/* Diseño responsivo */
+@media screen and (max-width: 768px) {
+    .contenedor {
+        flex-direction: wrap; /* Cambia a una sola columna */
+        align-items: center;
+    }
+
+    .imagen-container {
+        width: 40%; /* Ocupa todo el ancho en dispositivos móviles */
+    }
+}
+
+/*Cambio al codigo de mongral*/
+.imagen-container >img { /*Se utiliza la flechita para que solo seleccione las imagenes del contenedor que es el del producto y asi no afecte a las imagenes que aparecen*/
+    width: 175px;
+    height: 175px;
+    border: 5px solid rgb(129, 121, 129);
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out; /* Transición suave */
+}
+
+.imagen-container > img:hover { /*Se utiliza la flechita para que solo seleccione las imagenes del contenedor que es el del producto y asi no afecte a las imagenes que aparecen*/
+    transform: scale(1.1); /* Hace que la imagen aumente ligeramente */
+    border-color: red; /* Cambia el color del borde */
+    border-radius: 20px; /* Cambia el borde redondeado */
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #11c011;
+    margin-top: 10px;
 }
 
 
-.nike a {/*Estilo para los links de las imagenes de los tenis*/
-
-    max-width: 30%; /*El tamaño maximo de los links-imagenes respecto a su contenedor div es del 30%*/
-margin: 15px; /*El margen de los links-imagenes es de 15px*/
+.B1 {
+    border: none;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
 }
 
-.nike img:hover{/*Estilo para la animacion de las imagenes de los tenis*/
-    transform: scale(1.1); /*Al momemnto de pasar el raton sobre una imagen se hara una animacion que aumentara 1.1 el tamaño de la imagen*/
-    
+.B1:hover {
+    transform: scale(1.1);
+    background-color: rgb(219, 4, 4); /* Mantiene el fondo negro */
+    border-radius: 20px;
+    outline: none; /* Evita bordes blancos no deseados */
 }
- .parrafo{ /*Contenedor para los nombres de los tenis*/
-    display: flex; /*Hace flexible el contenedor*/
-    text-align: center; /*Alinea los nombres al centro*/
- }
-.parrafo p{
-    width: 30%; /*El tamaño del texto respecto a su contenedor es del 30%*/
-    margin: 15px;/*El margen entre los textos es 15px*/
-    margin-top: -15px;/*Acomoda los nombres un poco mas arriba*/
-    font-size: 22px; /*El tamaño del texto de los nombres es de 22px*/
-    font-family: fantasy; /*El tipo de fuente es fantasy*/
-    color: beige; /*El texto tendra un color verde*/
-    text-shadow: 5px  5px 10px red; /*El texto tendra un sombreado rojo*/
+
+.B2 {
+    background-color: black; /* Fondo negro */
+    color: rgb(236, 235, 235);
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    border: none; /* Evita cualquier borde blanco */
 }

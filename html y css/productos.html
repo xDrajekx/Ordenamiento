@@ -4,6 +4,7 @@
 
         <link rel="stylesheet" href="Negocios.css">
         <link rel="Stylesheet" href="menu.css">
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name = 'keywords' content = 'ropa tienda tenis'> 
@@ -11,7 +12,6 @@
     </head>
 
     <body>
-
       <nav class="menu"><!--el menu inicia aqui-->
                 
         <ul><!--es el simbolo de listas ordenadas-->
@@ -44,20 +44,20 @@
             <li><a href="contactos.html">Contacto</a></li><!--Es el apartado de linkeo que me lleva al apartado de contactos de mi pagina-->
            
         </ul><!--Esto son las listan desordenadas el oreden no importa-->
-        <button id="abrir-modal" class="filtros"> Ordenar y filtrar</button>
+        <button id="abrir-modal" class="filtros"> Ordenar y filtrar</button> <!--Esto se utiliza para abrir la modal de los filtros-->
         <div id="Ventana" class="modal">
         <div class="Contenido">
             <h3>FILTRAR Y ORDENAR</h3>
             <div class="button-ordena"> <button id="Muestra">ORDENAR POR</button><img src="/Imagenes/Flecha.jpg" alt="">
         
                 <div class="oculta-ordena"> 
-       <button id="Mayor" >MAYOR A MENOR PRECIO</button> 
-         <button id="Menor"> MENOR A MAYOR PRECIO</button> 
+       <button id="Mayor" >MAYOR A MENOR PRECIO</button> <!--Boton para ordenar el precio de mayor a menor-->
+         <button id="Menor"> MENOR A MAYOR PRECIO</button>  <!--Boton para ordenar el precio de menor a mayor-->
         </div>
     </div>
     <div class="button-ordena"> <button id="Filtro-precio">Marcas</button> <img src="/Imagenes/Flecha.jpg" alt="">
         <div class="Oculta-Marcas">
-            <label>
+            <label> <!--esta parte sera de los checkbox de las marcas disponibles en los filtros-->
             <input type="checkbox" data-categoria class=" Allcheck" value="Adidas">
             Adidas
           </label>
@@ -67,14 +67,14 @@
           </label>
     </div>
         </div>
-        <div class="button-ordena"> <button id="Filtro-Modelo">Modelos</button> <img src="/Imagenes/Flecha.jpg" alt="">    
+        <div class="button-ordena"> <button id="Filtro-Modelo">Modelos</button> <img src="/Imagenes/Flecha.jpg" alt="">
             <div class="Oculta-Modelos">
                  <button class="modelo"   data-modelo = "AirMax90">AirMax90</button>
             </div>
-          </div>
+        </div>
         <div class="button-ordena"> <button id="Filtro-Color">Colores</button> <img src="/Imagenes/Flecha.jpg" alt="">
             <div class="Oculta-color">
-            <label>
+            <label> <!--esta parte tendra todos los checkbox de color de los filtros con sus valores Negro, Blanco, Rojo, etc-->
             <input type="checkbox" data-color class="checkboxes Allcheck"  value="Negro">
             Negro
           </label>
@@ -106,63 +106,27 @@
             <input type="checkbox" data-color class="checkboxesVIII  Allcheck" value="Naranja">
             Naranja
           </label>
-        
+         
         </div>
         </div>
-        <div class="button-ordena"> <button id = "Filtro-genero">Genero</button> <img src="/Imagenes/Flecha.jpg" alt="">    
-        <div class="Oculta-generos">
-          <label>
-        <input type="checkbox" data-genero class="Allcheck" value="Hombre">
-        Hombre
-      </label>
-      <label>
-        <input type="checkbox" id="Hombres" data-genero class="Allcheck" value="Mujer">
-        Mujer
-      </label>
-        </div>
-        </div>
-          <button id="aplicar-filtros">Aplicar filtros</button>
+          <button id="aplicar-filtros">Aplicar filtros</button> <!--Es el boton que aplica los filtros-->
         
          
 
         
         
     </nav> <!--el menu termina aqui-->
-       
-        <div class = "destacados"><h2>Destacados de Nike</h2></div> <!--subtitu lo con la clase destadosN-->
-        <div class="contenedor">
-            <div class="imagen-container">
-                <img src="Imagenes/Air Force 1.jpg" alt="Producto 1">
-               
-                <h3>Nike Air Force</h3>
-                <p class="precio">$299.99</p>
-                <button class="B1"><box class="B2">Comprar</box></button>
-            </div>
-            <div class="imagen-container">
-                <img src= "Imagenes/AirJordan1 Low.jpg" alt="Producto 2">
-                <h3>Nike Air Max</h3>
-                <p class="precio">$399.99</p>
-                <button class="B1"><a href="Tenis/Nike2.html?id=AirJordan1Low"><box class="B2">Comprar</box></a></button>
-            </div>
-            <div class="imagen-container">
-                <img id="Evento" src="Imagenes/AirMax90.jpg" alt="Producto 3"> <!--A la imagen del producto que si se muestra se le da el id Evento-->
-                <div id="evento" class="imagenes-ocultas"> <!--Contenedor de las imagenes que se mostraran con el id evento-->
-                 <img  src="Imagenes/AirMax90.jpg" alt=""> <!--Todas las imagenes ocultas-->
-                  <a href="Tenis/Nike2.html?id=AirMax2">  <img   src="Imagenes/AirMax902.jpg "> </a>
-                  <a href="Tenis/Nike2.html?id=AirMax3">  <img  src="Imagenes/AirMax903.jpg" alt=""></a>
-                    <a href="Tenis/Nike2.html?id=AirMax4">  <img  src="Imagenes/AirMax904.jpg" alt=""> </a>
-                        <a href="Tenis/Nike2.html?id=AirMax5">  <img src="Imagenes/AirMax906.jpg" alt=""> </a>
-                </div>
-                <h3>Nike AirJordan1</h3>
-                <p class="precio">$499.99</p>
-                <button class="B1"><a href="/Tenis/Nike2.html?id=AirMax">  <box class="B2"> Ver mas</box></a></button>
-            </div>
-        </div>
-       <div class="destacados"> <h2>Destacados de Adidas</h2></div><!--Los destacados-->
-       <div class="destacados"><h2>Taquetes</h2></div>
-       <script src="Java/AbrirFiltros.js"></script>
-     <script src="/Java/ClickImagenes.js"></script>
-       <script src="/Java/Detalles.js"></script>
-       <script src="filtros.js"></script>
-    </body>
+      <div class="filtrados"> <h1>Productos</h1> </div>
+  <div class="contenedor" id="productos">
+  
+  
+
+ 
+</div>
+<script src="Java/AbrirFiltros.js"></script>
+<script src="filtros.js"></script>
+<script src="/Java/Filtros2.js"></script>
+<script src="Java/ClickImagenes.js"></script>
+<script src="Java/Mouseover.js"></script>
+</body>
 </html>
