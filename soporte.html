@@ -9,6 +9,39 @@
 </head>
 <body>
   
+    <nav class="menu"><!--el menu inicia aqui-->
+                
+        <ul><!--es el simbolo de listas ordenadas-->
+            <div class="logo"> <img src="\Apartado adidas\images\logo.jpg"></div> <!--logo en el menu-->
+        
+                    
+                    <li><a href="/Inicio.html" class="active">Inicio</a></li><!--Esto son lista que esta linkeada al apartado de inicio -->
+                    <li><!--mini elemnto de las listas ordenadas-->
+                        <a href="#">Productos</a><!--Esto nos ayuda a colocar enlaces y no esta linkeada a nada-->
+                        <div class="submenu"><!--Esto es la clase inicial del submenu aqui inicia el apartado de productos-->
+                            <ul><!--Esto son las listan desordenadas el orden no importa-->
+                                <li><a href="/html y css/Negocios.html">Destacado Nike</a></li><!--Es el apartado de linkeo que me lleva al destacado de nike-->
+                                <li><a href="/Proceso_1.html">Nike</a></li><!--Es el  linkeo que me lleva al apartado de nike-->
+                                <li><a href="/Apartado adidas/adidas.index.html">adidas</a></li><!--Es el linkeo que me lleva al apartado de adidas-->
+                                <li><a href="/Proceso_2.html">Jordan</a></li><!--Es el linkeo que me lleva al apartado de Jordan-->
+                            </ul><!--Esto son las listan desordenadas el oreden no importa-->
+                        </div><!--Funciona como un divisor que ayuda a seprara cosas del body o Head-->
+                    </li><!--mini elemnto de las listas ordenadas-->
+                    <li><!--mini elemnto de las listas ordenadas-->
+        
+        
+                        <a href="#">Servicios</a><!--Es el apartado para saber que servicios tenemos-->
+                        <div class="submenu"><!--Es la clase de los servicios para el css-->
+                            <ul><!--Esto son las listan desordenadas el oreden no importa-->
+                                <li><a href="/consultas.html">Consultoría</a></li><!--Es el apartado de linkeo que me lleva al apartado de consultas de mi pagina-->
+                                <li><a href="/soporte.html">Soporte</a></li><!--Es el apartado de linkeo que me lleva al apartado del soporte de mi pagina-->
+                            </ul><!--Esto son las listan desordenadas el oreden no importa-->
+                        </div><!--Funciona como un divisor que ayuda a seprara cosas del body o Head-->
+                    </li><!--mini elemnto de las listas ordenadas-->
+                    <li><a href="/noticias.html">Noticias</a></li><!--Es el apartado de linkeo que me lleva al apartado de noticias de mi pagina-->
+                    <li><a href="/contactos.html">Contacto</a></li><!--Es el apartado de linkeo que me lleva al apartado de contactos de mi pagina-->
+                </ul><!--Esto son las listan desordenadas el oreden no importa-->
+            </nav> <!--el menu termina aqui-->
 
 
 <div class="container">
@@ -24,14 +57,14 @@
             <span>Use su correo y su contraseña</span>
             <div class="container-input">
                 <ion-icon name="mail-outline"></ion-icon>
-                <input type="text" placeholder="Email">
+                <input type="text" required placeholder="Email">
             </div>
             <div class="container-input">
                 <ion-icon name="lock-closed-outline"></ion-icon>
-                <input type="password" placeholder="password">
+                <input type="password"required placeholder="password">
             </div>
            <a href="#">¿Olvidaste tu contraseña</a>
-            <button>Iniciar Sesion</button>
+            <a href="/soporte.html"><button>Iniciar Sesion</button></a>
         </form>
     </div>
     <div class="container-form">
@@ -46,43 +79,42 @@
     <span>Use su correo electronico para registrarse</span>
     <div class="container-input">
         <ion-icon name="person-circle-outline"></ion-icon>
-        <input type="text" placeholder="Nombre">
+        <input type="text" required placeholder="Nombre">
     </div>
     <div class="container-input">
         <ion-icon name="mail-outline"></ion-icon>
-        <input type="text" placeholder="Email">
+        <input type="text" required placeholder="Email">
     </div>
     <div class="container-input">
         <ion-icon name="lock-closed-outline"></ion-icon>
-        <input type="password" placeholder="password">
+        <input type="password" required placeholder="password">
     </div>
-    <button>Registrarse</button>
+    <div class="container-input">
+        <ion-icon name="navigate-circle-outline"></ion-icon>
+        <input type="text"required placeholder="codigo postal">
+    </div>
+
+    <a href="/soporte.html"><button>Registrarse</button></a>
 </form>
     </div>
 
     <div class="container-welcome">
         <div class="welcome-sign-up welcome">
 <h3>¡Bienvenido!</h3>
-<p>Ingrese sus datos personales para usar todas las funciones del sitio</p>
-<button class="button" id="btn_sign-up">Registrarse</button>
+<p>Ingrese sus datos personales para hacer la compra</p>
+<button class="button" id="btn-sign-up">Registrarse</button>
         </div>
         <div class="welcome-sign-in welcome">
 <h3>¡Hola!</h3>
-<p>Registrese con sus datos personales para usar todas las funciones del sitio</p>
+<p>Registrese con sus datos personales para hacer la compra</p>
 <button class="button" id="btn-sign-in">Iniciar Sesion</button>
         </div>
     </div>
 
 </div>
 
-
-
-
-
-
-
             <script src="/sesion.js"></script>
             <script  type ="module"  src=" https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js " ></script> 
-<script nomodule src=" https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js " ></script>
+<script nomodule src=" https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js "></script>
 </body>
 </html>
