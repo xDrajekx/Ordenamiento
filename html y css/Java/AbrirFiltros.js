@@ -31,7 +31,7 @@ MostrarColores.addEventListener('click', () =>{
 });
 const MostrarGeneros = document.getElementById('Filtro-genero');
 const HideGenero = document.querySelector('.Oculta-generos');
-MostrarGeneros.addEventListener('click', ( ) =>{
+MostrarGeneros.addEventListener('click', () =>{
   HideGenero.classList.toggle('Muestra-generos');
 });
 });

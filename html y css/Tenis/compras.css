@@ -21,7 +21,7 @@ top: 0;
 }
 .compra1 img{ /*Imagen de los tenis*/
     
-    width: 500px; /*La imagen ocupara un 100% del ancho de su contenedor*/
+    width: 400px; /*La imagen ocupara un 100% del ancho de su contenedor*/
     height: 100%; /*La imagen ocupara un 100% de la altura de su contenedor*/
     background-color: wheat;
 }

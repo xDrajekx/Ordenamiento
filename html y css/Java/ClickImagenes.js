@@ -50,17 +50,17 @@ const Parametros = new URLSearchParams(window.location.search);
 const id = Parametros.get('id'); //Obtiene el parametro id de la url de la pagina
 const productos2 = [ //Este arreglo contiene todos los productos con sus descripciones, iamgenes y detalles
   {id: 'AirMax', ImagenPrincipal: '../Imagenes/AirMax90.jpg', DescripcionColor: 'Negro', 
-    Descirpcion: 'Con su diseño elegante y minimalista, los Air Max 90 combinan estilo y comodidad en un solo paquete. La unidad Air Max visible en la parte inferior del talón proporciona una amortiguación incomparable, mientras que la parte superior de malla y cuero sintético garantiza una transpirabilidad y durabilidad excepcionales.', 
+    Descripcion: 'Con su diseño elegante y minimalista, los Air Max 90 combinan estilo y comodidad en un solo paquete. La unidad Air Max visible en la parte inferior del talón proporciona una amortiguación incomparable, mientras que la parte superior de malla y cuero sintético garantiza una transpirabilidad y durabilidad excepcionales.', 
     imagenes: {imagenColor: '../Imagenes/AirMax90.jpg', imagenColor1: '../Imagenes/AirMax902.jpg',  imagenColor2:'../Imagenes/AirMax903.jpg', imagenColor3: '../Imagenes/AirMax904.jpg', imagenColor4: '../Imagenes/AirMax906.jpg' }, 
     listas: {detalle1: 'Agrega una amortiguacion increible', detalle2: 'estilo versatil', detalle3: 'Estilo retro'}
   },
   {id: 'AirMax2', ImagenPrincipal: "../Imagenes/AirMax902.jpg", DescripcionColor: 'Color: Azul/Blacno/Rojo',
-     Descirpcion: 'Con su diseño elegante y minimalista, los Air Max 90 combinan estilo y comodidad en un solo paquete. La unidad Air Max visible en la parte inferior del talón proporciona una amortiguación incomparable, mientras que la parte superior de malla y cuero sintético garantiza una transpirabilidad y durabilidad excepcionales.', 
+     Descripcion: 'Con su diseño elegante y minimalista, los Air Max 90 combinan estilo y comodidad en un solo paquete. La unidad Air Max visible en la parte inferior del talón proporciona una amortiguación incomparable, mientras que la parte superior de malla y cuero sintético garantiza una transpirabilidad y durabilidad excepcionales.', 
        imagenes:{imagenColor:'../Imagenes/AirMax902.jpg', imagenColor1: '../Imagenes/AirMax90.jpg', imagenColor2:'../Imagenes/AirMax903.jpg', imagenColor3: '../Imagenes/AirMax904.jpg', imagenColor4: '../Imagenes/AirMax906.jpg' },
      listas: {detalle1: 'Agrega una amortiguacion increible', detalle2: 'estilo versatil', detalle3: 'Estilo retro'}},
 
   {id: 'AirMax3', ImagenPrincipal: "../Imagenes/AirMax903.jpg", DescripcionColor: 'Color: Verde militar/Verde oscuro', imagenes: {imagenColor: '../Imagenes/AirMax903.jpg',  imagenColor1: '../Imagenes/AirMax90.jpg', imagenColor2:'../Imagenes/AirMax902.jpg' },
-  Descirpcion: 'Con su diseño elegante y minimalista, los Air Max 90 combinan estilo y comodidad en un solo paquete. La unidad Air Max visible en la parte inferior del talón proporciona una amortiguación incomparable, mientras que la parte superior de malla y cuero sintético garantiza una transpirabilidad y durabilidad excepcionales.', 
+  Descripcion: 'Con su diseño elegante y minimalista, los Air Max 90 combinan estilo y comodidad en un solo paquete. La unidad Air Max visible en la parte inferior del talón proporciona una amortiguación incomparable, mientras que la parte superior de malla y cuero sintético garantiza una transpirabilidad y durabilidad excepcionales.', 
   listas: {detalle1: 'Agrega una amortiguacion increible', detalle2: 'estilo versatil', detalle3: 'Estilo retro'}},
 
 
@@ -72,7 +72,8 @@ const productos2 = [ //Este arreglo contiene todos los productos con sus descrip
 
   {id: 'AirForce2',  ImagenPrincipal: "../Imagenes/Air Force 1 07.avif", DescripcionColor: 'Color: Blanco'},
   
-  {id: 'AirJordan1Low', ImagenPrincipal: "../Imagenes/AirJordan1 Low.jpg", DescripcionColor: 'Color: Verde/ Blanco'}
+  {id: 'AirJordan1Low', ImagenPrincipal: "../Imagenes/AirJordan1 Low.jpg", DescripcionColor: 'Color: Verde/ Blanco'},
+  
 ]
 const producto = productos2.find(p => p.id ===id); //compara si la propiedad id de los productos es igual al id ingresado en la url y lo encuentra
 if (producto){ //si producto tiene algun valor entonces:

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Colors.style.display = 'none';
       });
     });
-  
+       
     Evento2.forEach(raton2 => {
       raton2.addEventListener('mouseover', () => {
         raton2.style.display = 'block';

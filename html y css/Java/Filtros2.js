@@ -29,10 +29,38 @@ const productos = [ //este es un arreglo que contiene todos los productos con su
     { id: 9, nombre: 'Air Force 1 Dance', categoria: 'Nike', color: 'Beige', precio: '1499MXN',  genero: 'Mujer', imagen: 'Imagenes/Air Force 1  Dance2.avif', link: 'Tenis/Nike2.html?id=Air Force 1 Dance2', 
       imagenes:{imagencolor: 'Imagenes/Air Force 1  Dance2.avif', imagencolor1: 'Imagenes/Air Force 1  Dance.avif', }, 
       links: {imagenLink1: 'Tenis/Nike2.html?id=Air Force 1 Dance2', imagenLink2:' Tenis/Nike2.html?id=Air Force 1 Dance'}  },
-      
   { id: 10, nombre: 'Adidas Samba Messi', categoria: 'Adidas', color:'Blanco', precio: 3099,  genero: 'Hombre', imagen: 'Imagenes/Samba Messi.jpg'},
   { id: 11, nombre: 'Adidas Samba Messi Rosa', categoria: 'Adidas', color:'Rosa', precio: 3099,  genero: 'Hombre', imagen: 'Imagenes/Samba Messi Rosa.jpg'},
-  { id: 12, nombre: 'Adidas superstar', categoria: 'Adidas', color:'Blanco', precio: 3099,  genero: 'Hombre', imagen: 'Imagenes/Adidas superstar.jpg'},
+  { id: 13, nombre: 'Adidas Campus 00s', categoria: 'Adidas', color: 'Negro', precio: '$1,699', genero: 'Unisex', imagen: 'Imagenes/Adidas Campus 00s.jpg', link: "Tenis/Nike2.html?id=Campus",
+    imagenes: {imagencolor: 'Imagenes/Adidas Campus 00s.jpg', imagencolor1:  'Imagenes/Adidas Campus 00s 2.avif', imagencolor2:  'Imagenes/Adidas Campus 00s 3.avif'},
+    links: { imagenLink1: 'Tenis/Nike2.html?=Campus', imagenLink2: 'Tenis/Nike2.html?=Campus2', imagenLink3: 'Tenis/Nike2.html?=Campus3'}},
+
+  { id: 16, nombre: 'Adidas superstar', categoria: 'Adidas', color:'Negro', precio: 3099,  genero: 'Unisex', imagen: 'Imagenes/Adidas superstar.jpg', link: 'Tenis/nike2.html?id=Superstar',
+    imagenes: {imagencolor:'Imagenes/Adidas superstar.jpg', imagencolor1: 'Imagenes/Adidas superstar 2.jpg' },
+    links: {imagenLink1: 'Tenis/nike2.html?id=Superstar', imagenLink2: 'Tenis/nike2.html?id=Superstar2'}},
+  
+  {id: 18, nombre: 'Adidas Forum Low CL', categoria: 'Adidas', color:'Blanco', precio: '$2,299', genero:'Hombre', imagen:'Imagenes/Adidas Forum Low CL.avif', link: "Tenis/Nike2.html?id=ForumLow",
+    imagenes:{imagencolor: 'Imagenes/Adidas Forum Low CL.avif', imagencolor2:'Imagenes/Adidas Forum Cl 2.avif',imagencolor3:'Imagenes/Adidas Forum Low CL 3.avif' },
+    links: {imagenLink1: "Tenis/Nike2.html?id=ForumLow", imagenLink2: "Tenis/Nike2.html?id=ForumLow2", imagenLink3: "Tenis/Nike2.html?id=ForumLow3"}
+   },
+ 
+   {id: 21, nombre: 'Adizero Adios PRO 4', categoria: 'Adidas', color: 'Rojo', precio: '$4,999', genero: 'Mujer', imagen: 'Imagenes/Adizero Adios PRO 4.avif', link: 'Tenis/Nike2.html?id=Adizero',
+    imagenes:{imagencolor: 'Imagenes/Adizero Adios PRO 4.avif', imagencolor1: 'Imagenes/Adizero Adios PRO 4 2.avif', imagencolor2: 'Imagenes/Adizero Adios PRO 4 3.avif'},
+    links:{imagenLink1:'Tenis/Nike2.html?id=Adizero', imagenLink2: 'Tenis/Nike2.html?id=Adizero2', imagenLink3: 'Tenis/Nike2.html?id=Adizero3'}
+   },
+ 
+   {id: 24, nombre: 'Adidas Gazelle', categoria: 'Adidas', color: 'Rojo', precio: '$2,399', genero: 'Mujer', imagen: 'Imagenes/Adidas Gazelle.avif', link: 'Tenis/Nike2.html?id=Gazelle',
+    imagenes:{imagencolor: 'Imagenes/Adidas Gazelle.avif', imagencolor1: 'Imagenes/Adidas Gazelle 2.avif', imagencolor2: 'Imagenes/Adidas Gazelle 3.avif', imagencolor3: 'Imagenes/Adidas Gazelle 4.avif'},
+    links: {imagenLink1:'Tenis/Nike2.html?id=Gazelle', imagenLink2: 'Tenis/Nike2.html?id=Gazelle2', imagenLink3: 'Tenis/Nike2.html?id=Gazelle3', imagenLink4: 'Tenis/Nike2.html?id=Gazelle4'}
+   },
+
+   {id: 28, nombre: 'Adidas Samba x Toy Story', categoria: 'Adidas', color: 'Cafe', precio: '$1,800', genero:'Niños', imagen: 'Imagenes/Adidas Samba Toy Story.avif', link: 'Tenis/Nike2.html?id=SambaToyStory',
+   imagenes: {imagencolor:'Imagenes/Adidas Samba Toy Story.avif'},
+   links: {imagenLink1: 'tenis/Nike2.html?id=SambaToyStory'}
+   },
+   {id:29, nombre:  'Adidas Orginals x Bad Bunny',categoria: 'Adidas', color: 'Blanco', precio:'$2,100', genero: 'Hombre', imagen:'Imagenes/Adidas Orginals x Bad Bunny', link: 'Tenis/Nike2.html?id=OriginalsBadBunny',
+    imagenes:{imagencolor: 'Adidas '}
+   }
 ]; //Aqui termina el arreglo de los productos
 
 let productosFiltrados = productos.filter(pe => (categorias.length === 0 || categorias.includes(pe.categoria)) && (colores.length === 0 || colores.includes(pe.color)) && (generos.length === 0 || generos.includes(pe.genero)) && (modeloSeleccionado2 ==='' || (pe.nombre === modeloSeleccionado2))
