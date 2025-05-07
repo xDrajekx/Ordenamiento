@@ -1,0 +1,140 @@
+<!DOCTYPE html><!--Esto ayuda a definir la version de html que utiliza tu documento-->
+<html lang="en"><!--indica que el idioma principal es el español-->
+<head><!--es el inicio del cuerpo-->
+    <link rel="icon" href="/Im.png" type="imagen/png">
+    <link rel="stylesheet" href="soporte.css"><!--es el linkeo al css donde se modifican los datos-->
+    <meta charset="UTF-8"><!--Nos permite definir acentos y caracteres especiales-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--ayuda a recopilar los pixeles de la computadora-->
+    <title>Soporte tecnico</title><!--para colocar titulos-->
+</head>
+<body>
+  
+    <nav class="menu"><!--el menu inicia aqui-->
+                
+        <ul><!--es el simbolo de listas ordenadas-->
+            <div class="logo"> <img src="/pagina completa/logo.jpg"></div> <!--logo en el menu-->
+        
+                    
+                    <li><a href="/pagina completa/Inicio.html" class="active">Inicio</a></li><!--Esto son lista que esta linkeada al apartado de inicio -->
+                    <li><!--mini elemnto de las listas ordenadas-->
+                        <a href="#">Productos</a><!--Esto nos ayuda a colocar enlaces y no esta linkeada a nada-->
+                        <div class="submenu"><!--Esto es la clase inicial del submenu aqui inicia el apartado de productos-->
+                            <ul><!--Esto son las listan desordenadas el orden no importa-->
+                                <li><a href="/pagina completa/html y css/Negocios.html">Destacado Nike</a></li><!--Es el apartado de linkeo que me lleva al destacado de nike-->
+                                <li><a href="/pagina completa/Proceso_1.html">Nike</a></li><!--Es el  linkeo que me lleva al apartado de nike-->
+                                <li><a href="/pagina completa/Apartado adidas/adidas.index.html">adidas</a></li><!--Es el linkeo que me lleva al apartado de adidas-->
+                                <li><a href="/pagina completa/Proceso_2.html">Jordan</a></li><!--Es el linkeo que me lleva al apartado de Jordan-->
+                            </ul><!--Esto son las listan desordenadas el oreden no importa-->
+                        </div><!--Funciona como un divisor que ayuda a seprara cosas del body o Head-->
+                    </li><!--mini elemnto de las listas ordenadas-->
+                    <li><!--mini elemnto de las listas ordenadas-->
+        
+        
+                        <a href="#">Servicios</a><!--Es el apartado para saber que servicios tenemos-->
+                        <div class="submenu"><!--Es la clase de los servicios para el css-->
+                            <ul><!--Esto son las listan desordenadas el oreden no importa-->
+                                <li><a href="/pagina completa/consultas.html">Consultoría</a></li><!--Es el apartado de linkeo que me lleva al apartado de consultas de mi pagina-->
+                                <li><a href="/pagina completa/soporte.html">Soporte</a></li><!--Es el apartado de linkeo que me lleva al apartado del soporte de mi pagina-->
+                            </ul><!--Esto son las listan desordenadas el oreden no importa-->
+                        </div><!--Funciona como un divisor que ayuda a seprara cosas del body o Head-->
+                    </li><!--mini elemnto de las listas ordenadas-->
+                    <li><a href="/pagina completa/noticias.html">Noticias</a></li><!--Es el apartado de linkeo que me lleva al apartado de noticias de mi pagina-->
+                    <li><a href="/pagina completa/contactos.html">Contacto</a></li><!--Es el apartado de linkeo que me lleva al apartado de contactos de mi pagina-->
+                    <li><a href="/pagina completa/bitacora.html">Bitacora</a></li><!--Es el apartado de linkeo que me lleva al apartado de contactos de mi pagina-->
+                </ul><!--Esto son las listan desordenadas el oreden no importa-->
+            </nav> <!--el menu termina aqui-->
+        
+
+
+<div class="container">
+    <div class="container-form">
+        <form class="sign-in">
+            <h2>Iniciar Sesion</h2>
+            <div class="social-networks">
+                <ion-icon name="logo-twitch"></ion-icon>
+                <ion-icon name="logo-twitter"></ion-icon>
+                <ion-icon name="logo-instagram"></ion-icon>
+                <ion-icon name="logo-tiktok"></ion-icon>
+            </div>
+            <span>Use su correo y su contraseña</span>
+            <div class="container-input">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" required placeholder="Email">
+            </div>
+            <div class="container-input">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password"required placeholder="password">
+            </div>
+           <a href="#">¿Olvidaste tu contraseña</a>
+            <a href="/soporte.html"><button>Iniciar Sesion</button></a>
+        </form>
+    </div>
+    <div class="container-form">
+<form class="sign-up">
+    <h2>Registrarse</h2>
+    <div class="social-networks">
+        <ion-icon name="logo-twitch"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-tiktok"></ion-icon>
+    </div>
+    <span>Use su correo electronico para registrarse</span>
+    <div class="container-input">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <input type="text" required placeholder="Nombre">
+    </div>
+    <div class="container-input">
+        <ion-icon name="mail-outline"></ion-icon>
+        <input type="text" required placeholder="Email">
+    </div>
+    <div class="container-input">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <input type="password" required placeholder="password">
+    </div>
+    <div class="container-input">
+        <ion-icon name="navigate-circle-outline"></ion-icon>
+        <input type="text"required placeholder="codigo postal">
+    </div>
+
+    <div class="container-input">
+        <ion-icon name="earth-outline"></ion-icon> <!-- Icono decorativo de planeta -->
+        <button id="boton-pais" onclick="mostrarLista()">Seleccionar país</button> <!-- Botón para mostrar la lista de países -->
+    </div>
+    
+    <select id="pais-lista" size="10" onchange="seleccionarPais()"> <!-- Lista desplegable de países -->
+       
+        <option>México</option>
+        <option>Estados Unidos</option>
+        <option>España</option>
+        <option>Argentina</option>
+        <option>Colombia</option>
+        <option>Chile</option>
+        <option>Perú</option>
+        <option>Brasil</option>
+        <option>Alemania</option>
+        <option>Francia</option>
+    </select>
+
+
+    <a href="/soporte.html"><button>Registrarse</button></a>
+</form>
+    </div>
+
+    <div class="container-welcome">
+        <div class="welcome-sign-up welcome">
+<h3>¡Bienvenido!</h3>
+<p>Ingrese sus datos personales para hacer la compra, si no tienes cuenta registrate ahora mismo.</p>
+<button class="button" id="btn-sign-up">Registrarse</button>
+        </div>
+        <div class="welcome-sign-in welcome">
+<h3>¡Hola!</h3>
+<p>Registrese con sus datos personales  para hacer la compra o para aclarar cualquier duda acerca del producto</p>
+<button class="button" id="btn-sign-in">Iniciar Sesion</button>
+        </div>
+
+<script src="/pais.js"></script>
+            <script src="/sesion.js"></script>
+            <script  type ="module"  src=" https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js " ></script> 
+<script nomodule src=" https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js "></script>
+</body>
+</html>
