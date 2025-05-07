@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');/*tipografia monserrat*/
+
+
+.menu {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.menu {
+    background-color: #333;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > ul {
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    pointer-events: all;
+}
+
+
+.menu a:hover,
+.menu a:focus {
+    background-color: #b02525;
+}
+
+.menu a.active {
+    background-color: #15c73e;
+}
+
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #373334;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    z-index: 10; /* Asegura que el submenu esté por encima de otros elementos */
+}
+
+
+.submenu ul {
+    display: block;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu a {
+    padding: 12px 16px;
+}
+
+.menu li:hover > .submenu,
+.menu li:focus-within > .submenu {
+    display: block;
+}
+
+.logo img{
+    width: 70px;
+    height:70px ;
+    margin-left:absolute  ;
+    border-radius: 20px;
+    margin-right:10px ;
+}
+
+body{
+    margin: 0;
+    background: linear-gradient(to left, #190a4eb0,#1e0d4c);/*Esto es para combinar varios colores a la ves*/
+}
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las imágenes en la fila */
+    gap: 50px; /* Espacio entre cada imagen */
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+
+.imagen-container {
+    background-color: #a2d9f8b4; /* Color gris alrededor de la imagen */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: fit-content;
+    width: 250px;
+}
+
+
+.imagen-container img {
+    width: 150px;
+    height: auto;
+    border: 5px solid rgb(129, 121, 129);
+    border-radius: 60%;
+    transition: all 0.5s ease-in-out; /* Transición suave */
+}
+
+.contenedor img:hover {
+    transform: scale(1.1); /* Hace que la imagen aumente ligeramente */
+    border-color: red; /* Cambia el color del borde */
+    border-radius: 60%; /* Cambia el borde redondeado */
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #7274f0;
+    margin-top: 10px;
+}
+
+
+.B1 {
+    border: none;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.B1:hover {
+    transform: scale(1.1);
+    background-color: rgb(219, 4, 4); /* Mantiene el fondo negro */
+    border-radius: 20px;
+    outline: none; /* Evita bordes blancos no deseados */
+}
+
+.B2 {
+    background-color: black; /* Fondo negro */
+    color: rgb(236, 235, 235);
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    border: none; /* Evita cualquier borde blanco */
+}
+
+i {
+    font-size: 40px;
+    color: #000000; /* Color de Instagram */
+  }
+h3{
+    text-align: center;
+    font-size: 18px;
+    color:#1850b8;
+}
+
+.fin1{
+    background: black;
+    margin-top: 10%;
+}
+.fin2{
+    text-align: center;
+}
+.P{
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+.bxl-gmail{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.p2{
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center; 
+    font-size: 15px;
+}
+.bx-copyright{ /*APARTADO DE LOGOTIPOS*/
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+.bxs-phone{
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+.p3{
+    font-size: 15px;
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .container-form {
+        width: 90%;
+    }
+
+    .container-welcome {
+        display: none; /* Oculta elementos en pantallas pequeñas */
+    }
+}
