@@ -1,46 +1,51 @@
-
-
 .contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Centra las imágenes en la fila */
     gap: 20px; /* Espacio entre cada imagen */
+
 }
 
 .imagen-container {
-    background-color: #d3cece; /* Color gris alrededor de la imagen */
+    background-color: #f2f2f2; /* Color gris alrededor de la imagen */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     width: fit-content;
     width: 250px;
+    border: 3px solid #666666;
 }
 /* Diseño responsivo */
 @media screen and (max-width: 768px) {
     .contenedor {
-        flex-direction: column; /* Cambia a una sola columna */
+        flex-direction: wrap; /* Cambia a una sola columna */
         align-items: center;
     }
 
     .imagen-container {
-        width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+        width: 40%; /* Ocupa todo el ancho en dispositivos móviles */
     }
 }
 
-
-.imagen-container img {
-    width: 200px;
-    height: auto;
+/*Cambio al codigo de mongral*/
+.imagen-container >img { /*Se utiliza la flechita para que solo seleccione las imagenes del contenedor que es el del producto y asi no afecte a las imagenes que aparecen*/
+    width: 175px;
+    height: 175px;
     border: 5px solid rgb(129, 121, 129);
     border-radius: 20px;
     transition: all 0.5s ease-in-out; /* Transición suave */
 }
 
-.contenedor img:hover {
+.imagen-container > img:hover { /*Se utiliza la flechita para que solo seleccione las imagenes del contenedor que es el del producto y asi no afecte a las imagenes que aparecen*/
     transform: scale(1.1); /* Hace que la imagen aumente ligeramente */
     border-color: red; /* Cambia el color del borde */
     border-radius: 20px; /* Cambia el borde redondeado */
 }
+
+
+
+
+
 
 .precio {
     font-size: 18px;

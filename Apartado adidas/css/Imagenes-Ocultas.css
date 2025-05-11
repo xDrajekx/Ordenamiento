@@ -1,0 +1,20 @@
+.imagenes-ocultas{ /*Contenedor de las imagenes ocultas*/
+    width: 250px; 
+    display: flex;
+    justify-self: center; /*Justifica el contenedor junto con las img al centro*/
+    display: none; /*Oculta el contenedor, asi ocultando las imagenes*/
+  
+  
+}
+.imagenes-ocultas img { /*Las imagenes*/
+width:45px ; /*un tamaño de 45px*/
+height: 50px;
+}
+.imagenes-ocultas img:hover{ 
+    border-bottom:  3px solid black;
+}
+.imagenes-ocultas a{
+    text-decoration: none;
+    
+}
+

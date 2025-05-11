@@ -15,7 +15,7 @@ const siguientebtn=document.getElementById("siguiente");
 const imagenes1 =[
     "images/teni5.jpg",
     "images/teni12.jpg",
-    "images/tenis2.jpg"
+    "Apartado adidas/images/teni4.jpg"
 ];
 
 let indiceActual = 0;
