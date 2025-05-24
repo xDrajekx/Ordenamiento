@@ -10,7 +10,7 @@
 width:45px ; /*un tamaño de 45px*/
 height: 50px;
 }
-.imagenes-ocultas img:hover{ 
+.imagenes-ocultas  img:hover{ 
     border-bottom:  3px solid black;
 }
 .imagenes-ocultas a{
