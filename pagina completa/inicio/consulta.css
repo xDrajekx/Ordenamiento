@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');/*tipografia monserrat*/
+
+
+.menu {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > ul {
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    pointer-events: all;
+}
+
+
+.menu a:hover,
+.menu a:focus {
+    background-color: #b02525;
+}
+
+.menu a.active {
+    background-color: #373334;
+}
+
+
+.menu a.active:hover,
+.menu a:focus{
+    background-color: #b02525;
+}
+
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #373334;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    z-index: 10; /* Asegura que el submenu esté por encima de otros elementos */
+}
+
+
+.submenu ul {
+    display: block;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu a {
+    padding: 12px 16px;
+}
+
+.menu li:hover > .submenu,
+.menu li:focus-within > .submenu {
+    display: block;
+}
+
+.logo img{
+    width: 70px;
+    height:70px ;
+    margin-left:absolute  ;
+    border-radius: 20px;
+    margin-right:10px ;
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family:'Times New Roman', Times, serif;
+    background: linear-gradient(to left, #190a4eb0,#1e0d4c);/*Esto es para combinar varios colores a la ves*/
+}
+
+.Formulario{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+.Formulario h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;   
+}
+.Formulario form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .username{
+   position: relative;
+   border-bottom: 2px solid #adadad;
+   margin:30px 0;
+}
+.username input{
+width: 100%;
+padding: 0 5px;
+height: 40px;
+font-size: 16px;
+border: none;
+background: none;
+outline: none;
+}
+.username label{
+position: absolute;
+top: 50%;
+left: 5px;
+color:#adadad;
+transform: translateY(-50%);
+font-size: 16px;
+pointer-events: none;
+}
+.username span::before{
+    content:'';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #a55e2f;
+}
+.username input:focus ~ label,
+.username input:valid ~ label{
+    top: -5px;
+    color: #6C3483;
+    transition: top 0.3s ease, color 0.3s ease;
+}
+.username input:focus ~ span::before,
+.username input:focus ~ span::before{
+    width: 100%;
+}
+.recordar{
+    margin: -5px 0 20px 5px;
+    color: blue;
+    cursor: pointer;
+}
+.recordar hover{
+    text-decoration: underline;
+}
+input[type="submit"]{
+width: 100%;
+height: 50;
+border: 1px solid;
+background: rgb(111, 111, 223);
+border-radius: 25px;
+font-size: 18px;
+color: white;
+cursor: pointer;
+outline: none;
+}
+input[type="submit"]:hover{
+    border-color: purple;
+    transition: .5s;
+}
+.registrarse{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color:black;
+}
+.registrarse a{
+color: blue;
+text-decoration: none;
+}
+.registrarse a:hover{
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .container-form {
+        width: 90%;
+    }
+
+    .container-welcome {
+        display: none; /* Oculta elementos en pantallas pequeñas */
+    }
+}
+.H{
+color: rgba(216, 212, 208, 0.678);
+text-align: center;
+font-size: 18px;
+
+}

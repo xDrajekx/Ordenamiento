@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen de Fondo</title>
+    <link rel="icon" href="Im.png" type="imagen/png">
+    <link rel="stylesheet" href="bitacora.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+      
+   <!-- Encabezado con logo y botón hamburguesa -->
+  <header class="header"><!--LA CLASE HEADER QUE ABARCA TODO EL BOTON DE TRES LINEAS DEL MENU HAMBURGUESA-->
+    <!-- Botón hamburguesa -->
+    <button class="hamburger-btn" id="hamburgerBtn"><!--BOTON DE MNU HAMBURGUESA CON ID PARA JAVASCRIPT-->
+      <span></span><!--Crea el botón hamburguesa, que consiste en tres líneas <span> usadas para mostrar u ocultar el menú en móviles.-->
+      <span></span>
+      <span></span>
+    </button>
+    <!-- Logo -->
+    <div class="logo"><!--CLASE DEL LOGO-->
+      <img src="logo.jpg" alt="Logo del sitio">
+    </div>
+  </header><!--AQUI TERMINA EL HEADER-->
+
+  <!-- Capa oscura detrás del menú -->
+  <div class="overlay" id="overlay"></div>
+  <!--Una capa oscura (overlay) que cubre el contenido al abrir el menú, permitiendo cerrar el menú al hacer clic fuera de él.-->
+
+  <!-- Menú lateral con submenús -->
+  <nav class="sidebar" id="sidebar">
+    <!--Define un menú lateral, oculto inicialmente y que se muestra al hacer clic en el botón hamburguesa.-->
+
+    <!-- Menú sin submenú -->
+    <div class="menu-item">
+      <a href="Inicio.html" class="menu-link" class="v">Inicio</a><!--AQUI ES EL INICIO ASI QUE NOLLEVA SUBMENUS DESPLEGABLES-->
+    </div>
+
+    <!--Al hacer clic en "Productos", se despliega un submenú con categorías.-->
+    <!-- Menú con submenú: Productos -->
+    <div class="menu-item">
+      <div class="menu-link" onclick="toggleSubmenu('productos')">
+        Productos
+        <span class="arrow">▼</span>
+      </div>
+      <div class="submenu" id="productos">
+        <a href="html y css/Negocios.html" class="submenu-item">Destacado Nike</a><!--CATEGORIAS-->
+        <a href="Proceso_1.html" class="submenu-item">Nike</a>
+        <a href="Apartado adidas/adidas.index.html" class="submenu-item">Adidas</a>
+        <a href="Proceso_1.html" class="submenu-item">Jordan</a>
+      </div>
+    </div>
+
+
+    <!-- Menú con submenú: Servicios -->
+    <div class="menu-item">
+      <div class="menu-link" onclick="toggleSubmenu('servicios')">
+        Servicios
+        <span class="arrow">▼</span>
+      </div>
+      <div class="submenu" id="servicios">
+        <a href="consultas.html" class="submenu-item">Consultas</a>
+        <a href="index (1).html" class="submenu-item">Registro</a>
+      </div>
+    </div>
+<!--Funciona igual que el anterior, con diferentes enlaces. Y ESTE ABARCA LOS SERVICIOS-->
+
+    <!-- Otros enlaces -->
+    <div class="menu-item">
+      <a href="noticias.html" class="menu-link">Noticias</a>
+      
+    </div><!--ENLACE PARA CONTACTOS SIN SUBMENUS-->
+
+
+    <!-- Otros enlaces -->
+    <div class="menu-item">
+      <a href="contactos.html" class="menu-link">Contactos</a>
+      
+    </div><!--ENLACE PARA CONTACTOS SIN SUBMENUS-->
+
+    <!-- Otros enlaces -->
+    <div class="menu-item">
+      <a href="bitacora.html" class="menu-link">Bitacora</a>
+      
+    </div><!--ENLACE PARA CONTACTOS SIN SUBMENUS-->
+  </nav>
+
+  <!-- Script funcional -->
+  <script src="menuham.js"></script>
+  <!--ENLACE PARA VINCULAR EL CSS-->
+
+
+    <div class="image-container">
+        <div class="content">
+            <h1>Avances del sitio web</h1>
+            <h3>2025</h3>
+        </div>
+
+    <div class="box">
+        <div class="opaco">
+            <h4>Fase 1: prototipo(V:0.2.1)</h4>
+            <h6>Febrero/9/2025</h6>
+      <p>Nuestra primera creacion fue hacer un resumen de los lenguajes mas populares o faclies de utilizar para los nuevos estudiantes que entraran en el mundo de la programacion pero lastimosamente fue complicado y decimos cambiarlo.</p>
+
+        <h4>Fase 2: Eliminacion de prototipo (v:1.0.0)</h4>
+        <h6>marzo/4/2025</h6>
+        <p>Decidimos borrar todo e iniciar desde cero con una nueva idea que trataria de una tienda online de zapatos.</p>
+
+<h4>Fase 3: Inicio de la pagina web(v:1.0.1)</h4>
+<h6>marzo/20/2025</h6>
+<p>Comenzamos agregando varias secciones que llevaria nuestro sitio web esto se pondria en el menu de inicio de la pagina, algunas de las secciones que agregamos fueron productos, servicios, noticias y contactos.</p>
+
+<h4>Fase 4: Apartados nuevos en el menu (v:1.2.0)</h4>
+<h6>abril/3/2025</h6>
+<p>Empezamos agregar codigo en nuestro apartado de productos, el cual lleva varias secciones de zapatos. Decidimos colocar marcas de las mas vendidas como Nike, Jordan, Adidas y tambien colocamos un Destacado de Nike, este consiste en agregar los tenis mas vendidos del momento.</p>
+
+<h4>Fase 5: Cambios en el inicio e imagenes con misma resolucion (v:1.3.1)</h4>
+<h6>abril/10/2025</h6>
+<p>Colocamos un video y mejoramos el menu con estilos de css en la pagina de inicio e hicimos algunos ajustes en las secciones de zapatos añadiendo y recortando imagenes a una misma resolucion.</p>
+
+
+<h4>Fase 6: Se agrego codigo para que funcionen los siguientes apartados (v:1.4.0)</h4>
+<h6>abril/28/2025</h6>
+<p>Aqui colocamos funcionalidad en los Apartados de contactos, soporte, noticias y servicios los cuales serviran de mucha ayuda al usuario que necesite comprar o tenga problemas con el sitio web.</p>
+
+
+<h4>Fase 7: Creamos el apartado de consultas para nuestros usuarios(v:1.5.1)</h4>
+<h6>abril/30/2025</h6>
+<p>Creamos un apartado exclusivo de consultas esto es para aclarar dudas o dar informacion acerca de cuando llega su pedido a su direccion correspondiente y mejoramos el inicio de sesion con una interfaz mas bonita y llamativa.</p>
+
+<h4>Fase 8: Se agrego cambios en el apartado de contactos(v:1.5.2)</h4>
+<h6>Mayo/1/2025</h6>
+<p>Añadimos enlaces que te guiaran a nuestras redes sociales en el apartado de contactos al igual que nuestro correo electronico.</p>
+
+<h4>Fase 9: Modificamos los fondos en los productos y nuevas funciones en las imagenes (v:1.6.0)</h4>
+<h6>Mayo/1/2025</h6>
+<p>Agregamos un fondo de video en el apartado de productos referente a cada logo de la marca de tenis y se agrego una funcion en las imagenes de los tenis que al hacer click te llevaria a las descripciones de los tenis.</p>
+
+
+<h4>Fase 10: Agregamos mas tenis y cambiamos el diseño de los productos (v:1.6.1)</h4>
+<h6>Mayo/1/2025</h6>
+<p>Implementamos cambios en los productos se añadio mas variedad de tenis, colocamos un contenedor adaptable a los tenis para darle un mejor estilo, botones de compra en cada contenedor y eliminamos los videos de fondo por fallos en la pagina.</p>
+
+<h4>Fase 11: Cambios en el menu e implementacion de Javascript(v:1.7.0)</h4>
+<h6>Mayo/3/2025</h6>
+<p>Adapatamos el menu del sitio web a resolucion de telefonos es decir menuhamburguesa, agregamos los nombres a cada imagen que contiene tenis, se añadio el precio a los tenis, y le agregamos la funcionalidad al boton la cual lo redirige a iniciar sesion para hacer la compra.</p>
+
+<h4>Fase 12: Funciones y cambios nuevos en el inicio (v:1.7.1)</h4>
+<h6>Mayo/5/2025</h6>
+<p> Se modifico el inicio de la pagina, añadimos divisores con diferentes imagenes llamativas el primer divisor lleva un boton el cual al dar click te lleva al catalogo que corresponde al teni deportivo, en el segundo divisor se coloco un video de otra marca que tenemos en nuestra pagina y al ultimo divisor se le coloco un contenedor con nuestro logo, enlaces a nuestras redes sociales, nuestro correo electronico, los numeros telefonicos y nuestros derechos de autor. <p>
+
+<h4>Fase 13: Funcion de zoom en las imagenes y cambios en las resoluciones de las imagenes(v:1.7.2)</h4>
+<h6>Mayo/8/2025</h6>
+<p>Hicimos un boton de ver mas cerca el cual funciona para mostrar la imagen mas detallada y otra funcion que puedes cambiar de imagen y una opcion de cerrar la imagen, se recortaron las imagenes para que cada una de ellas tenga la misma resolucion y se definio el fondo de color morado.</p>
+
+<h4>Fase 14: (v:1.7.5)</h4>
+<h6>Mayo/12/2025</h6>
+<p>Hicimos unos cambios en las imagenes quitandoles el fondo y adaptandolas a una mejor resolucion debido a que se desbordaban
+    anteriomente se agrego informacion en el inicio para nuestros clientes.</p>
+
+    <h4>Fase 15: se agrego un buscador para facilitar al usuario 
+        (v:1.8.0)</h4>
+<h6>Mayo/20/2025</h6>
+<p>Colocamos un buscador para facilitar las busqueda del teni que desee ademas de que se agregaron más descripciones en cada teni y al seleccionar en comprar te llevara a iniciar sesion para comprar el producto.</p>
+
+<h4>Fase 15: se agrego una ventana emergente de bienvenida
+    (v:1.8.2)</h4>
+<h6>mayo/28/2025</h6>
+<p>Agregamos una ventana emergente para darle una bienvenida de cortesia a nuestro sitio web.
+    ademas se agrego un boton para redirigirlo a inicio de sesion. 
+</p>
+
+<h4>Fase 16: se agrego el apartado de noticias 
+    (v:1.9.0)</h4>
+<h6>junio/5/2025</h6>
+<p>Agregamos el apartado de noticias en donde tenemos grandes descuentos para usted y los mas recientes tenis que salieron en el catalogo.
+</p>
+<h4>Fase 17: se mejoro el menu 
+    (v:1.9.1)</h4>
+<h6>junio/10/2025</h6>
+<p>Agregamos modificaciones en el menu fucionando el menu tradicional con el menu hamburguesa del maestro terminando asi con un menu adaptable a telefono y a computadora al igual que las demas cosas que tenemos en la pagina como productos el inicio de seion entre otras cosas.
+</p>
+<h4>Fase 18: se mejoro el registro
+    (v:1.9.2)</h4>
+<h6>junio/18/2025</h6>
+<p>Se agrego el codigo del maestro el cual es el registro que cuenta con validacion de correo, te obliga a colocar una contraseña mas segura, puedes enviar comentarios y te llegara a tu correo, pero no logre que saliera el gracias por enviar tu formulario.
+</p>
+<h4>Fase 19: se mejoro la bitacora
+    (v:1.9.3)</h4>
+<h6>junio/18/2025</h6>
+<p>Le dimos mas datos de cambios y de colores mas vivos ademas de que agregamos el footer para que recuerden nuestros contactos</p>
+
+
+        </div>
+        </div>
+         <div class="fin1">
+        <footer class="fin2">
+            <a href="#" arial-label="gmail"><i class="bx bxl-gmail"></i></a><i class="P">Pabloricardozamorahernandez@gmail.com</i>
+            <a href="#" arial-label="copyright"><i class="bx bx-copyright"></i></a><i class="p2">Derechos reservados por Deporpabrick Sport</i>
+        <div>
+            <a href="#" arial-label="copyright"><i class="bx bxs-phone"></i></a><i class="p3">Numeros telefonicos</i>
+            <i class="p3">+52 353 133 8218</i>
+            <i class="p3">+52 351 191 5626</i>
+            <i class="p3">+52 351 120 5258</i>
+        </div>
+        </footer>
+    </div>
+</body>
+</html>

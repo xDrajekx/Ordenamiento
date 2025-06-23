@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');/*tipografia monserrat*/
+
+
+body {
+  
+    padding: 5px;
+    margin: 5%;
+    font-family: "Montserrat", sans-serif;/*para definir a todo el body*/
+    margin: 0;/*separa la caja de otros elemntos*/
+    line-height: 1.6;/*Define los espacios de los parrafos*/
+    background: linear-gradient(to left, rgb(255, 251, 251),rgb(255, 251, 251););/*Esto es para combinar varios colores a la ves*/
+}
+
+* {/*ABARCA TODO SOBRE EL BODY*/
+  box-sizing: border-box;/*Hace que el padding y el borde se incluyan dentro del ancho/alto del elemento.*/
+  margin: 0;/*CERO MARGEN*/
+  padding: 0;/*CERO PADDING*/
+}
+
+/* --- ENCABEZADO Y ABARCA EL BOTON DEL MENU--- */
+.header {
+  display: flex;/*ESTABLCE UN CONTENEDOR FLEXIBLE HORIZONTAL*/
+  justify-content: space-between;/*AYUDA A SEPARAR LOS ELEMNTOS EN EL MENU HACIENDOLO FLEXIBLES*/
+  align-items: center; /*ALINEA LOS ELEMNTOS CENTRANDOLOS*/
+  padding: 10px 20px; /*PADDING CON 10PX ARRIBA Y 20PIXLES ABAJO*/
+  background-color: #222;/*COLOR DE FONDO DEL MENU*/
+}
+
+
+.logo img {/*CLASE LOGOTIPO*/
+    width: 50px;
+    height:50px ;
+    margin-left:absolute  ;
+    border-radius: 20px;
+    margin-right:10px ;
+
+}
+
+/*CLASE DEL BOTON HAMBURGUESA*/
+.hamburger-btn {
+  background: none;/*El botón hamburguesa no tiene fondo ni borde.*/
+  border: none;
+  cursor: pointer;/*Usa cursor en forma de mano y se ubica por encima del overlay.*/
+  z-index: 1001;
+}
+/*CLASE DEL BOTON ENFOCADO AL SPAN PARA CREAR LAS LINEAS BLANCAS DEL MENU*/
+.hamburger-btn span {/*Cada <span> crea una línea blanca que forma el ícono del menú.*/
+  display: block;
+  width: 25px;/*ANCHO 25PIXELES*/
+  height: 3px;/*ALTURA 3PIXELES*/
+  margin: 5px;/*MARGEN 5PIXELES*/
+  background-color: #fff;/*COLOR DE FONDO DE LAS LINEAS DE SPAN BLANCAS*/
+  transition: all 0.3s ease;/*TRANSITION AL PASAR EL MOUSE*/
+}
+
+/* --- Overlay  CAPA OSCURA DE FONDO--- */
+.overlay {
+  position: fixed;/*Cubre toda la pantalla.*/
+  top: 0;/*ARRIBA CERO*/
+  left: 0;/*IZQUIERDA 0*/
+  width: 100%;/*ANCHURA*/
+  height: 100%;/*HEIGHT DEL 100%*/
+  background-color: rgba(0,0,0,0.5);/*FONDO DEL MENU HAMBURGUESA AL APARECER*/
+  opacity: 0;/*OPACIDAD*/
+  visibility: hidden;/*Se oculta por defecto con opacity: 0 y visibility: hidden.*/
+  z-index: 1000;/*1000 POR ENCIMA DE TODO*LA CAPA OSCURA*/
+  transition: 0.3s;/*TRANSICION DE 0.3SEGUNDOS*/
+}
+
+/* --- MENU LAETRAL Sidebar --- */
+.sidebar {
+  position: fixed;/*POSICION FIJADA*/
+  top: 0;/*ARRIBA CERO*/
+  left: -250px;/*IZQUIERDA MENOS 250PIXELES*/
+  width: 250px;/*ANCHURA DE 250OIXELES*/
+  height: 100vh;/*ALTURA DE 100VIEWPORTHEIGHT*/
+  background-color: #333;/*COLOR DE FONDO DEL MENU LATERAL*/
+  overflow-y: auto;/*EVITA EL DESBORDAMIENTO VERTICAL*/
+  transition: 0.3s;/*TRANSITION DE 0.3SEGUNDOS*/
+  z-index: 1002;/*1002 POR ENCIMA DE TODO*/
+}
+/*ESPACIO ESTRE CADA ITEM DEL MENU*/
+.sidebar .menu-item {
+  margin-bottom: 15px;/*MARGEN ABAJO DE 15PIXELES*/
+}
+
+.sidebar :hover{
+   color: #ff0000; /* Color del texto cuando el cursor está encima */
+  background-color: #1a1818; /* Fondo del submenú en hover */
+  transition: background-color 0.3s ease, color 0.3s ease;/* Añade una animación suave de 0.3s para el color y fondo */
+}
+
+/*ENLACES Y SUBMENUS*/
+.menu-link {
+  color: #fff;/*COLOR DE LOS SUBMENUS Y ENLACES*/
+  text-decoration: none;/*SIN DECORACION EN LOS TEXTOS*/
+  cursor: pointer;/*Usa cursor en forma de mano y se ubica por encima del overlay.*/
+  display: flex;/*Use display: flex para colocar el texto y la flecha (▼) uno al lado del otro.*/
+  justify-content: space-between;/*AYUDA A SEPARAR LOS ELEMNTOS EN EL MENU HACIENDOLO FLEXIBLES*/
+  font-weight: bold;/*para hacer la letra en nmegrita*/
+}
+/*apartado submenus margen y padding*/
+.submenu {
+  display: none;
+  padding-left: 15px;/*padding izquierda 15pixeles*/
+  margin-top: 10px;/*mergen arriba de 10pixeles*/
+}
+
+/*elementos del apartado submenus*/
+.submenu-item {
+    color: #ccc; /* Color gris claro para el texto del submenú */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  display: block; /* Hace que el enlace ocupe todo el ancho disponible */
+  padding: 5px 0; /* Espaciado vertical de 5px (arriba y abajo), 0 horizontal */
+}
+/*submenu elementos transicion al aparecer*/
+.submenu-item:hover {
+  color: #ff0000; /* Color del texto cuando el cursor está encima */
+  background-color: #f1f1f1; /* Fondo del submenú en hover */
+  transition: background-color 0.3s ease, color 0.3s ease;/* Añade una animación suave de 0.3s para el color y fondo */
+}
+
+/*apratado de flecha para desplegar los submenus*/
+.arrow {
+  margin-left: 5px;/* Añade un espacio a la izquierda de la flecha */
+}
+
+/* --- Estados activos --- */
+.sidebar.active {
+  left: 0;/* Mueve la barra lateral a su posición visible (usado para mostrarla) */
+}
+/*capa semitransparente para enfocar al menu al aparecer*/
+.overlay.active {
+opacity: 1; /* La hace totalmente visible */
+  visibility: visible; /* Asegura que se puede ver */
+}
+
+/*define las medidas para celular*/
+@media (min-width: 768px) {
+  .hamburger-btn,
+  .overlay {
+    display: none;/* Oculta el botón hamburguesa y el fondo oscuro en pantallas grandes */
+  }
+/* barra lateral*/
+  .sidebar {
+    position: static; /* La barra lateral se comporta como parte del flujo normal */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: auto; /* Su altura se ajusta automáticamente al contenido */
+  display: flex; /* Se usa Flexbox para alinear los elementos internos */
+  flex-direction: row; /* Los elementos se colocan en fila horizontal */
+  background-color: #222; /* Fondo oscuro */
+  padding: 10px 20px; /* Espaciado interno: 10px arriba/abajo, 20px a los lados */
+  }
+  
+
+  .menu-item {
+    margin: 0 15px;/* Espacio horizontal entre los ítems del menú */
+  }
+
+  .submenu {
+    display: none; /* Oculto por defecto */
+  position: absolute; /* Posicionado respecto a su contenedor más cercano con posición relativa */
+  background-color: #333; /* Fondo gris oscuro */
+  padding: 10px; /* Espacio interno de 10px */
+  margin-top: 10px; /* Lo separa hacia abajo del ítem principal */
+  }
+/*Mostrar submenú al pasar el mouse*/
+  .menu-item:hover .submenu {
+    display: block;/* Muestra el submenú al pasar el mouse sobre el ítem */
+  }
+/*versión para pantallas grandes lo adapta */
+  .submenu-item {
+    padding: 8px 12px;/* Espaciado más amplio */
+    white-space: nowrap;/* Evita que el texto se divida en varias líneas */
+}
+  }
+
+
+
+
+
+
+p/*Es un parrafo*/ {
+    text-align: center;
+
+}
+.video-container/*es la clase que se le asigno al video de fondo*/ {
+    position: relative;/*Es útil para crear diseños más flexibles o para usarlo como referencia para elementos secundarios posicionados absolutamente.*/
+    height: 100vh;/*Esta propiedad establece la altura del elemento en el 100% de la altura del área visible del navegador (viewport).*/
+    overflow: hidden;/*Es útil para evitar que el contenido adicional "se desborde"*/
+}
+
+.video-background/*es la clase del video de fondo*/ {
+    position: absolute;/*Esta propiedad posiciona el elemento en relación con su contenedor más cercano que tenga una posición definida*/
+    top: 50%;/*posicion del elemnto hacia arriba con 50%*/
+    left: 50%;/*posicion hacia la izquierda con 50%*/
+    transform: translate(-50%, -50%);/*desplaza el elemento un 50% hacia la izquierda y un 50% hacia arriba, en relación con su propio tamaño (anchura y altura).*/
+    min-width: 100%;/*Establece un ancho mínimo del 100% del video*/
+    min-height: 100%;/*asegura que el elemento tenga una altura mínima del 100% del video*/
+    width: auto;/*Permite que el ancho del elemento se ajuste automáticamente al contenido o al diseño*/
+    height: auto;/*Ajusta la altura automáticamente según el contenido o el diseño*/
+    z-index: -1;/*Es útil para crear fondos que no interfieran con el contenido interactivo en el frente.*/
+    padding-top: 1%;
+}
+
+.box{
+    width: 100%;
+    height:35vmax;
+        margin:auto;
+        padding: 0; 
+    background-color:transparent;
+    background-image: url("zapatos/img12.jpg");
+background-size:cover;
+background-position:center;
+background-attachment: fixed;
+}
+
+.opaco{
+padding-top: 30%;
+margin-bottom: 5%;
+    padding-top: 20px;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.301);
+}
+.H{
+    text-align: center;
+    padding: 20px;
+}
+
+
+.H {
+    transition: color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    color: rgba(255, 255, 255, 0.932);
+    opacity: 1;
+}
+
+.H:hover {
+    color: red;
+    opacity: 0.7;
+}
+
+.H1{
+    text-align: center;
+    transition: color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
+.H1:hover{
+    color: red;
+    opacity:0.7;
+}
+
+
+.Boton{
+    display: flex;
+justify-content: center;
+padding-top:5%;
+}
+
+.B1 {
+  background: #000000;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+}
+
+.B1:hover {
+    transform: scale(1.1);
+    background-color: rgb(219, 4, 4); /* Mantiene el fondo negro */
+    border-radius: 20px;
+    outline: none; /* Evita bordes blancos no deseados */
+}
+
+.B2 {
+    background-color: transparent; /* Fondo negro */
+    color: rgb(255, 252, 252);
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    border: none; /* Evita cualquier borde blanco */
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las imágenes en la fila */
+    gap: 50px; /* Espacio entre cada imagen */
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.imagen-container {
+    background-color: #a2d9f8b4; /* Color gris alrededor de la imagen */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: fit-content;
+    width: 250px;
+}
+
+
+.imagen-container img {
+    width: 150px;
+    height: auto;
+    border: 5px solid rgb(129, 121, 129);
+    border-radius: 60%;
+    transition: all 0.5s ease-in-out; /* Transición suave */
+}
+
+.contenedor img:hover {
+    transform: scale(1.1); /* Hace que la imagen aumente ligeramente */
+    border-color: red; /* Cambia el color del borde */
+    border-radius: 60%; /* Cambia el borde redondeado */
+}
+
+
+
+i {
+    font-size: 40px;
+    color: #000000; /* Color de Instagram */
+  }
+h3{
+    text-align: center;
+    font-size: 18px;
+    color:#1850b8;
+}
+
+.fin1{
+    background: black;
+}
+.fin2{
+    text-align: center;
+}
+.P{
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+.bxl-gmail{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.p2{
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+.bx-copyright{
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+.bxs-phone{
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+.p3{
+    font-size: 15px;
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+
+    .container-form {
+        width: 90%;
+    }
+
+    .container-welcome {
+        display: none; /* Oculta elementos en pantallas pequeñas */
+    }
+  }
+.info{
+    text-align: center;
+    font-size:20px;
+    color: rgb(147, 115, 221);
+    font-weight: 500;
+    padding-top:30px;
+}
+.opaco_1{
+            padding-top: 20px;
+            height:300px;
+            width: 100%;
+            background: rgb(235, 228, 228);
+}
+
+.B5{
+background-color: #1850b8;
+text-align: center;
+font-size: 15px;
+color: white;
+}
+.B6{
+    background-color: #7274f0;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+
+.Span{
+    background-color: rgb(84, 176, 219);
+    text-align: center;
+    border-radius: 20%;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+.Span, .Span a {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  transition: 0.4s;
+}
+
+.Span:hover, .Span a:hover {
+  outline: none;
+  box-shadow: none;
+  transform: scale(1.1);
+  background-color: rgb(73, 118, 214);
+  border-radius: 30%;
+}

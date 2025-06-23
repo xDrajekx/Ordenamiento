@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración de metadatos básicos del documento -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario Profesional con Validación de Email</title>
+  
+  <!-- Importación de fuentes de Google Fonts para mejorar la tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <!-- EmailJS SDK - Biblioteca para envío de emails sin backend -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <!-- Hoja de estilos CSS externa -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Contenedor principal del formulario -->
+  <div class="container">
+    <!-- Título principal del formulario -->
+    <h1>Formulario de Registro</h1>
+    
+    <!-- Subtítulo con información sobre las características del formulario -->
+    <p style="text-align: center; color: #666; margin-bottom: 30px; font-size: 0.9rem;">
+      ✨ <strong>Nuevo:</strong> Validación automática de correos y medidor de fortaleza de contraseña
+    </p>
+
+    <!-- Formulario principal con validación personalizada (novalidate desactiva la validación del navegador) -->
+    <form id="professionalForm" novalidate>
+
+      <!-- CAMPO: Nombre completo -->
+      <div>
+        <!-- Etiqueta con clase 'required' para indicar campo obligatorio -->
+        <label for="name" class="required">Nombre completo</label>
+        <input
+          type="text"
+          id="name"
+          name="user_name"
+          placeholder="Escribe tu nombre completo"
+          required
+        />
+        <!-- Contenedor para mostrar mensajes de error específicos del campo -->
+        <div class="error-message" id="error-name" aria-live="polite"></div>
+      </div>
+
+      <!-- CAMPO: Correo electrónico con validación especial -->
+      <div class="email-field-container">
+        <label for="email" class="required">Correo electrónico</label>
+        <input
+          type="email"
+          id="email"
+          name="user_email"
+          placeholder="ejemplo@dominio.com"
+          required
+          autocomplete="email" ><!-- Habilita autocompletado del navegador -->
+        />
+        <div class="error-message" id="error-email" aria-live="polite"></div>
+        <!-- Texto informativo sobre la validación automática -->
+        <div style="font-size: 0.8rem; color: #666; margin-top: 4px;">
+          📧 Verificaremos automáticamente que tu email sea válido
+        </div>
+      </div>
+
+      <!-- CAMPO: Confirmación de correo electrónico -->
+      <div>
+        <label for="emailConfirm" class="required">Confirmar correo electrónico</label>
+        <input
+          type="email"
+          id="emailConfirm"
+          name="user_email_confirm"
+          placeholder="Repite tu correo electrónico"
+          required
+          autocomplete="email"
+        />
+        <div class="error-message" id="error-emailConfirm" aria-live="polite"></div>
+      </div>
+
+      <!-- CAMPO: Contraseña con medidor de fortaleza -->
+      <div class="password-field">
+        <label for="password" class="required">Contraseña</label>
+        <!-- Contenedor especial para campo de contraseña con botón de mostrar/ocultar -->
+        <div class="input-password">
+          <input
+            type="password"
+            id="password"
+            name="user_password"
+            placeholder="Ingresa tu contraseña"
+            required
+            autocomplete="new-password"> <!-- Indica al navegador que es una contraseña nueva -->
+          />
+          <!-- Botón para alternar visibilidad de la contraseña -->
+          <button type="button" id="togglePassword" aria-label="Mostrar/ocultar contraseña">👁️</button>
+        </div>
+        
+        <!-- Indicador visual de fortaleza de contraseña (inicialmente oculto) -->
+        <div class="password-strength" id="passwordStrength" style="display: none;">
+          <span class="password-strength-label">Fortaleza de la contraseña:</span>
+          <!-- Contenedor de la barra de progreso -->
+          <div class="password-strength-bar-container">
+            <div class="password-strength-bar" id="strengthBar"></div>
+          </div>
+          <!-- Texto descriptivo de la fortaleza -->
+          <div class="password-strength-text" id="strengthText">Escribe tu contraseña</div>
+        </div>
+        
+        <div class="error-message" id="error-password" aria-live="polite"></div>
+      </div>
+
+      <!-- CAMPO: Confirmación de contraseña -->
+      <div>
+        <label for="passwordConfirm" class="required">Confirmar contraseña</label>
+        <div class="input-password">
+          <input
+            type="password"
+            id="passwordConfirm"
+            name="user_password_confirm"
+            placeholder="Repite tu contraseña"
+            required
+            autocomplete="new-password"
+          />
+          <!-- Botón separado para mostrar/ocultar confirmación de contraseña -->
+          <button type="button" id="togglePasswordConfirm" aria-label="Mostrar/ocultar contraseña">👁️</button>
+        </div>
+        <div class="error-message" id="error-passwordConfirm" aria-live="polite"></div>
+      </div>
+
+      <!-- CAMPO: Edad con limitación de caracteres -->
+      <div>
+        <label for="age" class="required">Edad</label>
+        <input
+          type="text"
+          id="age"
+          name="user_age"
+          placeholder="Ejemplo: 35"
+          required
+          maxlength="3"> <!-- Limita a máximo 3 caracteres -->
+        />
+        <div class="error-message" id="error-age" aria-live="polite"></div>
+      </div>
+
+      <!-- CAMPO: Fecha de nacimiento usando selector de fecha nativo -->
+      <div>
+        <label for="birthdate" class="required">Fecha de nacimiento</label>
+        <input type="date" id="birthdate" name="user_birthdate" required />
+        <div class="error-message" id="error-birthdate" aria-live="polite"></div>
+      </div>
+
+      <!-- CAMPO: Comentarios (opcional) con contador de caracteres -->
+      <div>
+        <label for="comments">Comentarios (opcional)</label>
+        <textarea
+          id="comments"
+          name="user_comments"
+          placeholder="Escribe aquí tus comentarios"
+          rows="5"
+          maxlength="2000" <!-- Límite de 2000 caracteres -->
+        </textarea>
+        <!-- Contador dinámico de caracteres -->
+        <div class="char-counter" id="commentsCounter">0 / 2000 caracteres</div>
+        <div class="error-message" id="error-comments" aria-live="polite"></div>
+      </div>
+
+      <!-- Botón de envío del formulario -->
+      <button type="submit" id="submitBtn">Enviar información</button>
+    </form>
+
+    <!-- Caja informativa sobre las características de seguridad -->
+    <div style="background: #e3f2fd; border: 1px solid #2196F3; padding: 12px; border-radius: 8px; margin-top: 20px; font-size: 0.85rem; color: #1565C0;">
+      <strong>🔍 Características de seguridad:</strong>
+      <ul style="margin: 8px 0; padding-left: 20px;">
+        <li>Verificación completa del email</li>
+        <li>Medidor de fortaleza de contraseña</li>
+        <li>Validación en tiempo real</li>
+        <li>Detección de contraseñas comunes</li>
+      </ul>
+    </div>
+
+    <!-- MENSAJES DE RETROALIMENTACIÓN AL USUARIO -->
+    
+    <!-- Mensaje de éxito (inicialmente oculto) -->
+    <div class="success-message" id="successMessage" style="display:none;">
+      ¡Formulario enviado con éxito! Te contactaremos pronto.
+      <br><br>
+      <!-- Enlace a página de agradecimiento -->
+      <a href="gracias.html" style="color: #155724; text-decoration: underline; font-weight: bold;">
+        Ver página de agradecimiento completa →
+      </a>
+      <br><br>
+      <!-- Botón para recargar la página y enviar otro formulario -->
+      <button onclick="window.location.reload()" style="background: #155724; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+        Enviar otro formulario
+      </button>
+    </div>
+
+    <!-- Mensaje de envío en progreso (inicialmente oculto) -->
+    <div class="sending-message" id="sendingMessage" style="display:none;">
+      Enviando... Por favor espera.
+    </div>
+
+    <!-- Mensaje de error global (inicialmente oculto) -->
+    <div class="error-message-global" id="errorMessage" style="display:none;">
+      Error al enviar el formulario. Por favor, inténtalo de nuevo.
+    </div>
+  </div>
+
+  <!-- Archivo JavaScript externo que contiene toda la lógica del formulario -->
+  <script src="script.js"></script>
+</body>
+</html>

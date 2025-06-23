@@ -1,0 +1,188 @@
+<!DOCTYPE html><!--Esto ayuda a definir la version de html que utiliza tu documento-->
+<html lang="es"><!--indica que el idioma principal es el español-->
+<head><!--Es el inicio cuerpo de la pagina web-->
+    <meta charset="UTF-8"><!--Nos permite definir acentos y caracteres especiales-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--ayuda a recopilar los pixeles de la computadora-->
+    <link rel="stylesheet" href="noticias.css"><!--Es la funcion para llamar al CSS de este Html-->
+    <link rel="icon" href="Im.png" type="imagen/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Apartado de Noticias</title><!--titulo-->
+</head><!--fin del cuerpo-->
+<body><!--lo que se muestra en la pagina-->
+    
+   <!-- Encabezado con logo y botón hamburguesa -->
+  <header class="header"><!--LA CLASE HEADER QUE ABARCA TODO EL BOTON DE TRES LINEAS DEL MENU HAMBURGUESA-->
+    <!-- Botón hamburguesa -->
+    <button class="hamburger-btn" id="hamburgerBtn"><!--BOTON DE MNU HAMBURGUESA CON ID PARA JAVASCRIPT-->
+      <span></span><!--Crea el botón hamburguesa, que consiste en tres líneas <span> usadas para mostrar u ocultar el menú en móviles.-->
+      <span></span>
+      <span></span>
+    </button>
+    <!-- Logo -->
+    <div class="logo"><!--CLASE DEL LOGO-->
+      <img src="logo.jpg" alt="Logo del sitio">
+    </div>
+  </header><!--AQUI TERMINA EL HEADER-->
+
+  <!-- Capa oscura detrás del menú -->
+  <div class="overlay" id="overlay"></div>
+  <!--Una capa oscura (overlay) que cubre el contenido al abrir el menú, permitiendo cerrar el menú al hacer clic fuera de él.-->
+
+  <!-- Menú lateral con submenús -->
+  <nav class="sidebar" id="sidebar">
+    <!--Define un menú lateral, oculto inicialmente y que se muestra al hacer clic en el botón hamburguesa.-->
+
+    <!-- Menú sin submenú -->
+    <div class="menu-item">
+      <a href="Inicio.html" class="menu-link" class="v">Inicio</a><!--AQUI ES EL INICIO ASI QUE NOLLEVA SUBMENUS DESPLEGABLES-->
+    </div>
+
+    <!--Al hacer clic en "Productos", se despliega un submenú con categorías.-->
+    <!-- Menú con submenú: Productos -->
+    <div class="menu-item">
+      <div class="menu-link" onclick="toggleSubmenu('productos')">
+        Productos
+        <span class="arrow">▼</span>
+      </div>
+      <div class="submenu" id="productos">
+        <a href="html y css/Negocios.html" class="submenu-item">Destacado Nike</a><!--CATEGORIAS-->
+        <a href="Proceso_1.html" class="submenu-item">Nike</a>
+        <a href="Apartado adidas/adidas.index.html" class="submenu-item">Adidas</a>
+        <a href="Proceso_1.html" class="submenu-item">Jordan</a>
+      </div>
+    </div>
+
+
+    <!-- Menú con submenú: Servicios -->
+    <div class="menu-item">
+      <div class="menu-link" onclick="toggleSubmenu('servicios')">
+        Servicios
+        <span class="arrow">▼</span>
+      </div>
+      <div class="submenu" id="servicios">
+        <a href="consultas.html" class="submenu-item">Consultas</a>
+        <a href="index (1).html" class="submenu-item">Registro</a>
+      </div>
+    </div>
+<!--Funciona igual que el anterior, con diferentes enlaces. Y ESTE ABARCA LOS SERVICIOS-->
+
+    <!-- Otros enlaces -->
+    <div class="menu-item">
+      <a href="noticias.html" class="menu-link">Noticias</a>
+      
+    </div><!--ENLACE PARA CONTACTOS SIN SUBMENUS-->
+
+
+    <!-- Otros enlaces -->
+    <div class="menu-item">
+      <a href="contactos.html" class="menu-link">Contactos</a>
+      
+    </div><!--ENLACE PARA CONTACTOS SIN SUBMENUS-->
+
+    <!-- Otros enlaces -->
+    <div class="menu-item">
+      <a href="bitacora.html" class="menu-link">Bitacora</a>
+      
+    </div><!--ENLACE PARA CONTACTOS SIN SUBMENUS-->
+  </nav>
+
+  <!-- Script funcional -->
+  <script src="menuham.js"></script>
+  <!--ENLACE PARA VINCULAR EL CSS-->
+
+
+
+<div class="Noticias"><h2>🔥Enterese de nuestros mejores descuentos para usted🔥</h2></div>
+
+
+    <div class="contenedor">
+        <div class="imagen-container">
+            <img src="zapatos.nike/Air Force 1  Dance_resultado.webp" alt="Producto 1">
+            <h3>Nike Air Force</h3>
+             <div class="precio-anterior">
+                <sapn class="tachado">$2500</sapn>
+            </div>
+            <div>
+             <p class="precio">🔥$1950🔥</p>
+             </div>
+            <a href="consultas.html"><button class="B1"><box class="B2">Comprar</box></button></a>
+        </div>
+        <div class="imagen-container">
+            <img src="zapatos.nike/Air Force 1 07_resultado.webp" alt="Producto 2">
+            <h3>Nike Air Max</h3>
+            <div class="precio-anterior">
+                <sapn class="tachado">$3000</sapn>
+            </div>
+            <div>
+             <p class="precio">🔥$2500🔥</p>
+             </div>
+            <a href="consultas.html"><button class="B1"><box class="B2">Comprar</box></button></a>
+        </div>
+        <div class="imagen-container">
+            <img src="zapatos.nike/Air Force 1 Low x Ambush_resultado.webp" alt="Producto 3">
+            <h3>Nike AirJordan1</h3>
+             <div class="precio-anterior">
+                <sapn class="tachado">$2500</sapn>
+            </div>
+            <div>
+             <p class="precio">🔥$2000🔥</p>
+             </div>
+            <a href="consultas.html"><button class="B1"><box class="B2">Comprar</box></button></a>
+        </div>
+        <div class="imagen-container">
+            <img src="zapatos.nike/Air Force 1 Shadow_resultado.webp" alt="Producto 4">
+            <h3>Nike AirMax90</h3>
+            <div class="precio-anterior">
+                <sapn class="tachado">$2999</sapn>
+            </div>
+            <div>
+             <p class="precio">🔥$2600🔥</p>
+             </div>
+            <a href="consultas.html"><button class="B1"><box class="B2">Comprar</box></button></a>
+        </div>
+
+        <div class="imagen-container">
+            <img src="zapatos.nike/Air max 95_resultado.webp" alt="Producto 5">
+            <h3>Nike AirMax95</h3>
+            <div class="precio-anterior">
+                <sapn class="tachado">$3599</sapn>
+            </div>
+            <div>
+             <p class="precio">🔥$3200🔥</p>
+             </div>
+            <a href="consultas.html"><button class="B1"><box class="B2">Comprar</box></button></a>
+        </div>
+        <div class="imagen-container">
+            <img src="zapatos.nike/AirMax97.jpg" alt="Producto 6">
+            <h3>Nike AirMax97</h3>
+             <div class="precio-anterior">
+                <sapn class="tachado">$2889</sapn>
+            </div>
+            <div>
+             <p class="precio">🔥$2050🔥</p>
+             </div>
+            <a href="consultas.html"><button class="B1"><box class="B2">Comprar</box></button></a>
+        </div>
+        <div class="imagen-container">
+            <img src="zapatos.nike/AirMax906_resultado.webp" alt="Producto 6">
+            <h3>Nike AirMax902</h3>
+             <div class="precio-anterior">
+                <sapn class="tachado">$3200</sapn>
+            </div>
+            <div>
+             <p class="precio">🔥$2950🔥</p>
+             </div>
+            <a href="consultas.html"><button class="B1"><box class="B2">Comprar</box></button></a>
+        </div>
+        <div class="imagen-container">
+            <img src="zapatos.nike/AirMax90.jpg" alt="Producto 6">
+            <h3>Nike AirMax904</h3>
+            <div class="precio-anterior">
+                <sapn class="tachado">$2350</sapn>
+            </div>
+            <div>
+             <p class="precio">🔥$2000🔥</p>
+             </div>
+            <a href="consultas.html"><button class="B1"><box class="B2">Comprar</box></button></a>
+</body>
+</html><!---fin de html-->

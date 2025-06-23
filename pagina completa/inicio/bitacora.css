@@ -1,0 +1,305 @@
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .container-form {
+        width: 90%;
+    }
+
+    .container-welcome {
+        display: none; /* Oculta elementos en pantallas pequeñas */
+    }
+}
+
+/* Estilos globales para body y html */
+body, html{
+    font-family: "Montserrat", sans-serif;/*para definir a todo el body*/
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno interno */
+    height: 100%; /* Asegura que ocupen toda la altura de la ventana del navegador */
+}
+
+/* Contenedor de la imagen de fondo */
+.image-container {
+  
+    background: white;
+    background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor sin distorsionarse */
+    height: auto; /* Ocupa el 100% de la altura de la ventana */
+    position: relative; /* Permite posicionar elementos secundarios dentro de este contenedor */
+}
+
+/* Contenido que se mostrará sobre la imagen de fondo */
+.content {
+   
+    position: relative; /* Mantiene su posición dentro de .image-container */
+    z-index: 1; /* Asegura que este contenido se muestre por encima del fondo */
+    color: rgb(255, 245, 245); /* Texto en color blanco para mejor contraste */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 20px; /* Agrega un espacio interno de 20px */
+    background-color: rgba(77, 75, 75, 0.514); /* Fondo negro semitransparente (50% de opacidad) */
+}
+h4{
+    font-size: 22px;
+    color: #75acfd;
+}
+h6{
+    font-size: 12px;
+    color: #a7dff5;
+}
+/* Estilos para el título */
+h1 {
+    font-size: 48px; /* Tamaño de fuente grande para destacar */
+}
+
+/* Estilos para los párrafos */
+p {
+    color: #4f4f4;
+    font-size: 20px; /* Tamaño de fuente intermedio para mejor lectura */
+}
+
+* {/*ABARCA TODO SOBRE EL BODY*/
+  box-sizing: border-box;/*Hace que el padding y el borde se incluyan dentro del ancho/alto del elemento.*/
+  margin: 0;/*CERO MARGEN*/
+  padding: 0;/*CERO PADDING*/
+}
+
+/* --- ENCABEZADO Y ABARCA EL BOTON DEL MENU--- */
+.header {
+  display: flex;/*ESTABLCE UN CONTENEDOR FLEXIBLE HORIZONTAL*/
+  justify-content: space-between;/*AYUDA A SEPARAR LOS ELEMNTOS EN EL MENU HACIENDOLO FLEXIBLES*/
+  align-items: center; /*ALINEA LOS ELEMNTOS CENTRANDOLOS*/
+  padding: 10px 20px; /*PADDING CON 10PX ARRIBA Y 20PIXLES ABAJO*/
+  background-color: #222;/*COLOR DE FONDO DEL MENU*/
+}
+
+
+.logo img {/*CLASE LOGOTIPO*/
+    width: 50px;
+    height:50px ;
+    margin-left:absolute  ;
+    border-radius: 20px;
+    margin-right:10px ;
+
+}
+
+/*CLASE DEL BOTON HAMBURGUESA*/
+.hamburger-btn {
+  background: none;/*El botón hamburguesa no tiene fondo ni borde.*/
+  border: none;
+  cursor: pointer;/*Usa cursor en forma de mano y se ubica por encima del overlay.*/
+  z-index: 1001;
+}
+/*CLASE DEL BOTON ENFOCADO AL SPAN PARA CREAR LAS LINEAS BLANCAS DEL MENU*/
+.hamburger-btn span {/*Cada <span> crea una línea blanca que forma el ícono del menú.*/
+  display: block;
+  width: 25px;/*ANCHO 25PIXELES*/
+  height: 3px;/*ALTURA 3PIXELES*/
+  margin: 5px;/*MARGEN 5PIXELES*/
+  background-color: #fff;/*COLOR DE FONDO DE LAS LINEAS DE SPAN BLANCAS*/
+  transition: all 0.3s ease;/*TRANSITION AL PASAR EL MOUSE*/
+}
+
+/* --- Overlay  CAPA OSCURA DE FONDO--- */
+.overlay {
+  position: fixed;/*Cubre toda la pantalla.*/
+  top: 0;/*ARRIBA CERO*/
+  left: 0;/*IZQUIERDA 0*/
+  width: 100%;/*ANCHURA*/
+  height: 100%;/*HEIGHT DEL 100%*/
+  background-color: rgba(0,0,0,0.5);/*FONDO DEL MENU HAMBURGUESA AL APARECER*/
+  opacity: 0;/*OPACIDAD*/
+  visibility: hidden;/*Se oculta por defecto con opacity: 0 y visibility: hidden.*/
+  z-index: 1000;/*1000 POR ENCIMA DE TODO*LA CAPA OSCURA*/
+  transition: 0.3s;/*TRANSICION DE 0.3SEGUNDOS*/
+}
+
+/* --- MENU LAETRAL Sidebar --- */
+.sidebar {
+  position: fixed;/*POSICION FIJADA*/
+  top: 0;/*ARRIBA CERO*/
+  left: -250px;/*IZQUIERDA MENOS 250PIXELES*/
+  width: 250px;/*ANCHURA DE 250OIXELES*/
+  height: 100vh;/*ALTURA DE 100VIEWPORTHEIGHT*/
+  background-color: #333;/*COLOR DE FONDO DEL MENU LATERAL*/
+  overflow-y: auto;/*EVITA EL DESBORDAMIENTO VERTICAL*/
+  transition: 0.3s;/*TRANSITION DE 0.3SEGUNDOS*/
+  z-index: 1002;/*1002 POR ENCIMA DE TODO*/
+}
+/*ESPACIO ESTRE CADA ITEM DEL MENU*/
+.sidebar .menu-item {
+  margin-bottom: 15px;/*MARGEN ABAJO DE 15PIXELES*/
+}
+
+.sidebar :hover{
+   color: #ff0000; /* Color del texto cuando el cursor está encima */
+  background-color: #1a1818; /* Fondo del submenú en hover */
+  transition: background-color 0.3s ease, color 0.3s ease;/* Añade una animación suave de 0.3s para el color y fondo */
+}
+
+/*ENLACES Y SUBMENUS*/
+.menu-link {
+  color: #fff;/*COLOR DE LOS SUBMENUS Y ENLACES*/
+  text-decoration: none;/*SIN DECORACION EN LOS TEXTOS*/
+  cursor: pointer;/*Usa cursor en forma de mano y se ubica por encima del overlay.*/
+  display: flex;/*Use display: flex para colocar el texto y la flecha (▼) uno al lado del otro.*/
+  justify-content: space-between;/*AYUDA A SEPARAR LOS ELEMNTOS EN EL MENU HACIENDOLO FLEXIBLES*/
+  font-weight: bold;/*para hacer la letra en nmegrita*/
+}
+/*apartado submenus margen y padding*/
+.submenu {
+  display: none;
+  padding-left: 15px;/*padding izquierda 15pixeles*/
+  margin-top: 10px;/*mergen arriba de 10pixeles*/
+}
+
+/*elementos del apartado submenus*/
+.submenu-item {
+    color: #ccc; /* Color gris claro para el texto del submenú */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  display: block; /* Hace que el enlace ocupe todo el ancho disponible */
+  padding: 5px 0; /* Espaciado vertical de 5px (arriba y abajo), 0 horizontal */
+}
+/*submenu elementos transicion al aparecer*/
+.submenu-item:hover {
+  color: #ff0000; /* Color del texto cuando el cursor está encima */
+  background-color: #f1f1f1; /* Fondo del submenú en hover */
+  transition: background-color 0.3s ease, color 0.3s ease;/* Añade una animación suave de 0.3s para el color y fondo */
+}
+
+/*apratado de flecha para desplegar los submenus*/
+.arrow {
+  margin-left: 5px;/* Añade un espacio a la izquierda de la flecha */
+}
+
+/* --- Estados activos --- */
+.sidebar.active {
+  left: 0;/* Mueve la barra lateral a su posición visible (usado para mostrarla) */
+}
+/*capa semitransparente para enfocar al menu al aparecer*/
+.overlay.active {
+opacity: 1; /* La hace totalmente visible */
+  visibility: visible; /* Asegura que se puede ver */
+}
+
+/*define las medidas para celular*/
+@media (min-width: 768px) {
+  .hamburger-btn,
+  .overlay {
+    display: none;/* Oculta el botón hamburguesa y el fondo oscuro en pantallas grandes */
+  }
+/* barra lateral*/
+  .sidebar {
+    position: static; /* La barra lateral se comporta como parte del flujo normal */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: auto; /* Su altura se ajusta automáticamente al contenido */
+  display: flex; /* Se usa Flexbox para alinear los elementos internos */
+  flex-direction: row; /* Los elementos se colocan en fila horizontal */
+  background-color: #222; /* Fondo oscuro */
+  padding: 10px 20px; /* Espaciado interno: 10px arriba/abajo, 20px a los lados */
+  }
+  
+
+  .menu-item {
+    margin: 0 15px;/* Espacio horizontal entre los ítems del menú */
+  }
+
+  .submenu {
+    display: none; /* Oculto por defecto */
+  position: absolute; /* Posicionado respecto a su contenedor más cercano con posición relativa */
+  background-color: #333; /* Fondo gris oscuro */
+  padding: 10px; /* Espacio interno de 10px */
+  margin-top: 10px; /* Lo separa hacia abajo del ítem principal */
+  }
+/*Mostrar submenú al pasar el mouse*/
+  .menu-item:hover .submenu {
+    display: block;/* Muestra el submenú al pasar el mouse sobre el ítem */
+  }
+/*versión para pantallas grandes lo adapta */
+  .submenu-item {
+    padding: 8px 12px;/* Espaciado más amplio */
+    white-space: nowrap;/* Evita que el texto se divida en varias líneas */
+}
+  }
+
+
+.box{
+    display: block;
+    overflow-y: auto;
+    text-align: center;
+    width: 80%;
+    max-height: 300px;
+    margin: 10%;
+    padding: 10px;
+    box-shadow: 0 8px 24px rgb(174, 174, 174, 192, 0.25);
+    border: 1px solid #ccc;
+    background-color: rgb(255, 255, 255, 0.9);
+  
+}
+
+.opaco{
+
+   align-items: center;
+padding-top: 30%;
+margin-bottom: 5%;
+    padding-top: 20px;
+    height: auto;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.582);
+}
+
+
+.fin1{
+    background: black;
+}
+.fin2{
+    text-align: center;
+}
+.P{
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+.bxl-gmail{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.p2{
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+.bx-copyright{
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+.bxs-phone{
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+.p3{
+    font-size: 15px;
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
